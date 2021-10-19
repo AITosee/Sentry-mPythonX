@@ -1,0 +1,105 @@
+<category id="morpxSentry" name="Sentry" colour="#EF5411">
+  <category id="morpxSentry_Setup" name="{$CATEGORY_MORPX_SENTRY_SETUP}" colour="#EF5411">
+    <!-- 初始化 Sentry -->
+    <block type="Vs2SentryInit"></block>
+
+    <!-- 恢复默认设置 -->
+    <block type="Vs2Reset"></block>
+
+    <!-- 启用算法 -->
+    <block type="Vs2VisionBegin">
+      <value name="VisionType">
+        <shadow type="Vs2VisionType"></shadow>
+      </value>
+    </block>
+
+    <!-- 设置 LED -->
+    <block type="Vs2SetLEDColor">
+      <value name="level">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="Vs2SetVisionLevel">
+      <value name="VisionType">
+        <shadow type="Vs2VisionType"></shadow>
+      </value>
+    </block>
+
+    <block type="Vs2SetColorRecognitionRegion">
+      <value name="Width">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+      <value name="Height">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="Vs2SetColorBlockMinBlob">
+      <value name="Width">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+      <value name="Height">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="Vs2SetVisionZoom"></block>
+
+    <block type="Vs2SetUARTBaud"></block>
+
+    <block type="Vs2SetCameraWhiteBalance"></block>
+
+    <block type="Vs2SetCameraHFR"></block>
+  </category>
+
+  <category id="morpxSentry_Run" name="{$CATEGORY_MORPX_Sentry_RUN}" colour="#EAA20A">
+    <block type="Vs2GetDetectedStatus">
+      <value name="VisionType">
+        <shadow type="Vs2VisionType"></shadow>
+      </value>
+    </block>
+
+    <block type="Vs2GetMessage">
+      <value name="VisionType">
+        <shadow type="Vs2VisionType"></shadow>
+      </value>
+    </block>
+
+    <block type="Vs2DetectedColorDetect"></block>
+
+    <block type="Vs2GetColorRCGLabel">
+      <value name="x">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="y">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="Vs2GetMessageColor"></block>
+
+    <block type="Vs2GetColorLabel"></block>
+
+    <block type="Vs2GetShapeCardType"></block>
+
+    <block type="Vs2GetTrafficCardType"></block>
+
+    <block type="Vs2GetNumCardType"></block>
+
+  </category>
+</category>
