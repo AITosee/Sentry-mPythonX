@@ -40,25 +40,7 @@ Blockly.Python['SentryVisionSetStatus'] = function (block) {
 	return code;
 };
 
-// 设置 LED
-Blockly.Python['SentrySetLEDColor'] = function (block) {
-
-  var sentry = block.getFieldValue('sentry');
-  var led_id = block.getFieldValue('led_id');
-  var level = Blockly.Python.valueToCode(block, "level", Blockly.Python.ORDER_NONE) || '1';
-  var detected_color = block.getFieldValue('detected_color');
-  var undetected_color = block.getFieldValue('undetected_color');
-  Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
-  var code = 'sentry' + sentry + '.LedSetColor(' + led_id + ', ' + detected_color + ', ' + undetected_color + ', ' + level + ')\n';
-  if (detected_color == undetected_color) {
-    code += 'sentry' + sentry + '.LedSetMode(' + led_id + ', 1, 1)\n';
-  } else {
-    code += 'sentry' + sentry + '.LedSetMode(' + led_id + ', 0, 0)\n';
-  }
-	return code;
-};
-
-Blockly.Python['SentrySetVisionLevel'] = function (block) {
+Blockly.Python['SentrySetParamNum'] = function (block) {
   var sentry = block.getFieldValue('sentry');
   var VisionType = Blockly.Python.valueToCode(block, 'VisionType', Blockly.Python.ORDER_ATOMIC);
   var VisionLevel = block.getFieldValue('VisionLevel');
@@ -67,25 +49,36 @@ Blockly.Python['SentrySetVisionLevel'] = function (block) {
 	return code;
 };
 
-Blockly.Python['SentrySetColorRecognitionRegion'] = function (block) {
+// 设置 LCD
+Blockly.Python['SentryLcdSetMode'] = function (block) {
+
   var sentry = block.getFieldValue('sentry');
-  var width = Blockly.Python.valueToCode(block, "Width", Blockly.Python.ORDER_NONE) || '5';
-  var height = Blockly.Python.valueToCode(block, "Height", Blockly.Python.ORDER_NONE) || '5';
+  var lcd_sw = block.getFieldValue('lcd_sw');
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
-  var code = 'sentry' + sentry + '.SetValue(VISION_COLOR_RECOGNITION, WidthValue, ' + width + ')\n' + 'sentry' + sentry + '.SetValue(VISION_COLOR_RECOGNITION, HeightValue, ' + height + ')\n';
+
+  code += 'sentry' + sentry + '.LcdSetMode('+ lcd_sw + ')\n';
+
 	return code;
 };
 
-Blockly.Python['SentrySetColorBlockMinBlob'] = function (block) {
+// 设置 LED
+Blockly.Python['SentryLedSetColor'] = function (block) {
+
   var sentry = block.getFieldValue('sentry');
-  var width = Blockly.Python.valueToCode(block, "Width", Blockly.Python.ORDER_NONE) || '5';
-  var height = Blockly.Python.valueToCode(block, "Height", Blockly.Python.ORDER_NONE) || '5';
+  var level = Blockly.Python.valueToCode(block, "level", Blockly.Python.ORDER_NONE) || '1';
+  var detected_color = block.getFieldValue('detected_color');
+  var undetected_color = block.getFieldValue('undetected_color');
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
-  var code = 'sentry' + sentry + '.SetValue(VISION_COLOR_DETECT, WidthValue, ' + width + ')\n' + 'sentry' + sentry + '.SetValue(VISION_COLOR_DETECT, HeightValue, ' + height + ')\n';
+  var code = 'sentry' + sentry + '.LedSetColor(' + led_id + ', ' + detected_color + ', ' + undetected_color + ', ' + level + ')\n';
+  if (detected_color == undetected_color) {
+    code += 'sentry' + sentry + '.LedSetMode(' + ', 1, 1)\n';
+  } else {
+    code += 'sentry' + sentry + '.LedSetMode(' + ', 0, 0)\n';
+  }
 	return code;
 };
 
-Blockly.Python['SentrySetVisionZoom'] = function (block) {
+Blockly.Python['SentryCameraSetZoom'] = function (block) {
   var sentry = block.getFieldValue('sentry');
   var ZoomLevel = block.getFieldValue('ZoomLevel');
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';

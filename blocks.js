@@ -91,7 +91,7 @@ Blockly.Blocks["SentryVisionType"] = {
 };
 
 // 启用算法
-Blockly.Blocks["SentryVisionBegin"] = {
+Blockly.Blocks["SentryVisionSetStatus"] = {
   init: function () {
     this.jsonInit({
       colour: VisionSensor_SetupMode_Color,
@@ -123,8 +123,7 @@ Blockly.Blocks["SentryVisionBegin"] = {
   },
 };
 
-// 设置 LED
-Blockly.Blocks["SentrySetLEDColor"] = {
+Blockly.Blocks["SentrySetParamNum"] = {
   init: function () {
     this.jsonInit({
       colour: VisionSensor_SetupMode_Color,
@@ -135,12 +134,66 @@ Blockly.Blocks["SentrySetLEDColor"] = {
           type: "field_dropdown",
         },
         {
-          name: "led_id",
+          check: "String",
+          type: "input_value",
+          name: "VisionType",
+        },
+        {
+          name: "VisionLevel",
           options: [
-            ["LED 1", "Led1"],
-            ["LED 2", "Led2"],
-            ["LED All", "LedAll"],
+            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "LevelDefault"],
+            [Blockly.Msg.SENTRY_LEVEL_SPEED, "LevelSpeed"],
+            [Blockly.Msg.SENTRY_LEVEL_BALANCE, "LevelBalance"],
+            [Blockly.Msg.SENTRY_LEVEL_ACCURACY, "LevelAccuracy"],
           ],
+          type: "field_dropdown",
+        },
+      ],
+      nextStatement: null,
+      previousStatement: null,
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_SET_VISION_LEVEL_MESSAGE0,
+    });
+  },
+};
+
+// 设置 LCD
+Blockly.Blocks["SentryLcdSetMode"] = {
+  init: function () {
+    this.jsonInit({
+      colour: VisionSensor_SetupMode_Color,
+      args0: [
+        {
+          name: "sentry",
+          options: sentry,
+          type: "field_dropdown",
+        },
+        {
+          name: "lcd_sw",
+          options: [
+            ["ON", "True"],
+            ["OFF", "False"],
+          ],
+          type: "field_dropdown",
+        },
+      ],
+      nextStatement: null,
+      previousStatement: null,
+      message0: Blockly.Msg.SENTRY_LED_SET_COLOR_MESSAGE0,
+      inputsInline: true,
+    });
+  },
+};
+
+// 设置 LED
+Blockly.Blocks["SentryLedSetColor"] = {
+  init: function () {
+    this.jsonInit({
+      colour: VisionSensor_SetupMode_Color,
+      args0: [
+        {
+          name: "sentry",
+          options: sentry,
           type: "field_dropdown",
         },
         {
@@ -189,99 +242,7 @@ Blockly.Blocks["SentrySetLEDColor"] = {
   },
 };
 
-Blockly.Blocks["SentrySetVisionLevel"] = {
-  init: function () {
-    this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
-        },
-        {
-          name: "VisionLevel",
-          options: [
-            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "LevelDefault"],
-            [Blockly.Msg.SENTRY_LEVEL_SPEED, "LevelSpeed"],
-            [Blockly.Msg.SENTRY_LEVEL_BALANCE, "LevelBalance"],
-            [Blockly.Msg.SENTRY_LEVEL_ACCURACY, "LevelAccuracy"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_SET_VISION_LEVEL_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["SentrySetColorRecognitionRegion"] = {
-  init: function () {
-    this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          check: "Number",
-          type: "input_value",
-          name: "Width",
-        },
-        {
-          check: "Number",
-          type: "input_value",
-          name: "Height",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_SET_COLOR_RECOGNITION_REGION_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["SentrySetColorBlockMinBlob"] = {
-  init: function () {
-    this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          check: "Number",
-          type: "input_value",
-          name: "Width",
-        },
-        {
-          check: "Number",
-          type: "input_value",
-          name: "Height",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_SET_COLOR_BLOCK_MIN_BLOB_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["SentrySetVisionZoom"] = {
+Blockly.Blocks["SentryCameraSetZoom"] = {
   init: function () {
     this.jsonInit({
       colour: VisionSensor_SetupMode_Color,
