@@ -8,42 +8,41 @@ Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '运行模块';
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化视觉传感器，并选择相关的地址';
 
 // 设置模块文本
-Blockly.Msg.SENTRY_INIT_MESSAGE0 = '初始化 %1 端口 %2';
-Blockly.Msg.SENTRY_RESET_MESSAGE0 = '%1 恢复默认设置';
-Blockly.Msg.SENTRY_BEGIN_MESSAGE0 = '%1 %2 算法 %3';
-Blockly.Msg.SENTRY_LED_SET_COLOR_MESSAGE0 = '%1 %2 检测到结果 %4 否则 %5 亮度(0~15) %3';
-Blockly.Msg.SENTRY_SET_VISION_LEVEL_MESSAGE0 = '%1 算法 %2 性能 %3';
-// Blockly.Msg.SENTRY_SET_COLOR_RECOGNITION_REGION_MESSAGE0 = '%1 🌈 颜色识别 设置识别区域 宽度 = %2 高度 = %3';
-Blockly.Msg.SENTRY_SET_COLOR_RECOGNITION_REGION_MESSAGE0 = '%1 颜色识别 设置识别区域 宽度 = %2 高度 = %3';
-// Blockly.Msg.SENTRY_SET_COLOR_BLOCK_MIN_BLOB_MESSAGE0 = '%1 🌈 色块检测 设置最小识别尺寸 宽度 = %2 高度 = %3';
-Blockly.Msg.SENTRY_SET_COLOR_BLOCK_MIN_BLOB_MESSAGE0 = '%1 色块检测 设置最小识别尺寸 宽度 = %2 高度 = %3';
-Blockly.Msg.SENTRY_SET_VISION_ZOOM_MESSAGE0 = '%1 数码变焦 %2';
-Blockly.Msg.SENTRY_SET_UART_BAUD_MESSAGE0 = '%1 串口波特率 %2';
-Blockly.Msg.SENTRY_SET_CAMERA_WHITE_BALANCE_MESSAGE0 = '%1 摄像头白平衡 %2';
-Blockly.Msg.SENTRY_SET_CAMERA_HFR_MESSAGE0 = '%1 高帧率模式 %2';
+Blockly.Msg.SENTRY_BEGIN_MESSAGE0 = '初始化 %1 端口 %2';
+Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0 = ' %1 恢复默认参数';
+Blockly.Msg.SENTRY_VISION_SET_STATUS_MESSAGE0 = '%1 %2 算法 %3';
+Blockly.Msg.SENTRY_SET_PARAMNUM_MESSAGE0 = '设置 %1 算法 %2 参数个数 %3';
+Blockly.Msg.SENTRY_SET_PARAM_MESSAGE0 = '设置 %1 算法 %2 参数 %3 索引 %4';
+Blockly.Msg.SENTRY_COLORPARAM_MESSAGE0 = '颜色识别 区域中心横坐标 %1 纵坐标 %2 宽度 %3 高度 %4';
+Blockly.Msg.SENTRY_BOLDPARAM_MESSAGE0 = '色块检测 最小宽度 %1 高度 %2 检测标签 %3';
+Blockly.Msg.SENTRY_FACEPARAM_MESSAGE0 = '人脸标签 %1';  
+Blockly.Msg.SENTRY_LCD_SET_MODE_MESSAGE0 = '设置 %1 LCD 显示 %2';
+Blockly.Msg.SENTRY_LED_SET_COLOR_MESSAGE0 = '设置 %1 检测到结果 %3 否则 %4 亮度(0~15) %2';
+Blockly.Msg.SENTRY_CAMERA_SET_ZOOM_MESSAGE0 = '设置 %1 数码变焦 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_ROTATE_MESSAGE0 = '设置 %1 摄像头旋转180° %2';
+Blockly.Msg.SENTRY_CAMERA_SET_AWB_MESSAGE0 = '设置 %1 摄像头白平衡 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_FPS_MESSAGE0 = '设置 %1 摄像头高帧率模式 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_BRIGHTNESS_MESSAGE0 = '设置 %1 图像亮度 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_CONTRAST_MESSAGE0 = '设置 %1 图像对比度 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_SATURATION_MESSAGE0 = '设置 %1 图像饱和度 %2';
+Blockly.Msg.SENTRY_CAMERA_SET_SHAPRNESS_MESSAGE0 = '设置 %1 图像锐化 %2';
+Blockly.Msg.SENTRY_DETECTED_MESSAGE0 = '%1 算法 %2 检测结果数量';
+Blockly.Msg.SENTRY_GET_VALUE_MESSAGE0 = '%1 算法 %2 结果 %3 索引 %4';
+Blockly.Msg.SENTRY_COLORRCGVALUE_MESSAGE0 = '%1 算法颜色识别结果 %2 索引 %3';
+Blockly.Msg.SENTRY_QRRCGVALUE_MESSAGE0 = ' %1 二维码识别结果 %2';
+Blockly.Msg.SENTRY_GET_QRCODEVALUE_MESSAGE0 = '%1 二维码识别结果字符串';
+Blockly.Msg.SENTRY_ROWS_MESSAGE0 = '%1 图像宽度';
+Blockly.Msg.SENTRY_COLS_MESSAGE0 = '%1 图像高度';
+Blockly.Msg.SENTRY_DETECTEDCOLOR_MESSAGE0 = '%1 颜色识别算法检测到 %2 索引 %3';
+Blockly.Msg.SENTRY_DETECTEDBLOB_MESSAGE0 = '%1 色块检测算法检测到 %2 索引 %3';
+Blockly.Msg.SENTRY_DETECTEDCARD_MESSAGE0 = '%1 卡片识别算法检测到 %2 索引 %3';
+Blockly.Msg.SENTRY_DETECTED20CLASS_MESSAGE0 = '%1 20分类识别算法检测到 %2 索引 %3';
 
-// 运行模块文本
-Blockly.Msg.SENTRY_DETECTED_STATUS_MESSAGE0 = '%1 检测到 %2';
-Blockly.Msg.SENTRY_GET_COLOR_RCG_LABEL_MESSAGE0 = '%1 识别到 坐标 x= %2 y= %3 颜色';
-// Blockly.Msg.SENTRY_GET_MESSAGE_COLOR_MESSAGE0 = '获取 %1 算法 🌈 颜色识别 %2 值';
-Blockly.Msg.SENTRY_GET_MESSAGE_COLOR_MESSAGE0 = '获取 %1 算法 颜色识别 %2 值';
-Blockly.Msg.SENTRY_GET_MESSAGE_MESSAGE0 = '获取 %1 算法 %2 %3 值';
-// Blockly.Msg.SENTRY_DETECTED_COLOR_DETECT_MESSAGE0 = '%1 算法 🌈 色块检测 检测到 %2 色块';
-Blockly.Msg.SENTRY_DETECTED_COLOR_DETECT_MESSAGE0 = '%1 算法 色块检测 检测到 %2 色块';
-// Blockly.Msg.SENTRY_GET_COLOR_LABEL_MESSAGE0 = '获取 %1 算法 🌈 颜色识别 颜色 = %2';
-Blockly.Msg.SENTRY_GET_COLOR_LABEL_MESSAGE0 = '获取 %1 算法 颜色识别 颜色 = %2';
-// Blockly.Msg.SENTRY_GET_SHAPE_CARD_TYPE_MESSAGE0 = '获取 %1 算法 📐 形状卡片 type = %2';
-// Blockly.Msg.SENTRY_GET_TRAFFIC_CARD_TYPE_MESSAGE0 = '获取 %1 算法 🚥 交通卡片 type = %2';
-// Blockly.Msg.SENTRY_GET_NUM_CARD_TYPE_MESSAGE0 = '获取 %1 算法 🔢 数字卡片 type = %2';
-Blockly.Msg.SENTRY_GET_SHAPE_CARD_TYPE_MESSAGE0 = '获取 %1 算法 形状卡片 type = %2';
-Blockly.Msg.SENTRY_GET_TRAFFIC_CARD_TYPE_MESSAGE0 = '获取 %1 算法 交通卡片 type = %2';
-Blockly.Msg.SENTRY_GET_NUM_CARD_TYPE_MESSAGE0 = '获取 %1 算法 数字卡片 type = %2';
-
-// Vision Enable Disable
+// Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = '启用';
 Blockly.Msg.SENTRY_DISABLE = '关闭';
 
-// Vision type
+// Sentry type
 Blockly.Msg.SENTRY_VISION_COLOR_DETECT = '色块检测';
 Blockly.Msg.SENTRY_VISION_COLOR_RECOGNITION = '颜色识别';
 Blockly.Msg.SENTRY_VISION_BALL = '球体检测';
@@ -61,13 +60,20 @@ Blockly.SENTRY_VISION_SHAPE_CARD = '形状卡片';
 Blockly.SENTRY_VISION_TRAFFIC_CARD = '交通卡片';
 Blockly.SENTRY_VISION_NUM_CARD = '数字卡片';
 
-// Vision Level
-Blockly.Msg.SENTRY_LEVEL_DEFAULT = '默认';
-Blockly.Msg.SENTRY_LEVEL_SPEED = '速度优先';
-Blockly.Msg.SENTRY_LEVEL_BALANCE = '均衡';
-Blockly.Msg.SENTRY_LEVEL_ACCURACY = '准确率优先';
+// Sentry Config Level
+Blockly.Msg.SENTRY_Level1 = '等级1';
+Blockly.Msg.SENTRY_Level2 = '等级2';
+Blockly.Msg.SENTRY_Level3 = '等级3';
+Blockly.Msg.SENTRY_Level4 = '等级4';
+Blockly.Msg.SENTRY_Level5 = '等级5';
+Blockly.Msg.SENTRY_Level6 = '等级6';
+Blockly.Msg.SENTRY_Level7 = '等级7';
+Blockly.Msg.SENTRY_Level8 = '等级8';
+Blockly.Msg.SENTRY_Level9 = '等级9';
+Blockly.Msg.SENTRY_Level10 = '等级10';
+Blockly.Msg.SENTRY_LevelDefault = '自动';
 
-// Vision Zoom Type
+// Sentry Zoom Type
 Blockly.Msg.SENTRY_ZOOM_DEFAULT = '默认';
 Blockly.Msg.SENTRY_ZOOM_1 = '等级1';
 Blockly.Msg.SENTRY_ZOOM_2 = '等级2';
@@ -75,13 +81,13 @@ Blockly.Msg.SENTRY_ZOOM_3 = '等级3';
 Blockly.Msg.SENTRY_ZOOM_4 = '等级4';
 Blockly.Msg.SENTRY_ZOOM_5 = '等级5';
 
-// Vision White Balance Type
+// Sentry White Balance Type
 Blockly.Msg.SENTRY_AUTO = '自动';
 Blockly.Msg.SENTRY_LOCK_AWB = '锁定白平衡';
 Blockly.Msg.SENTRY_WHITE_LIGHT = '白光模式';
 Blockly.Msg.SENTRY_YELLOW_LIGHT = '黄光模式';
 
-// Vision State Value Type
+// Sentry State Value Type
 Blockly.Msg.SENTRY_STATE_VALUE_X = '横向坐标';
 Blockly.Msg.SENTRY_STATE_VALUE_Y = '纵向坐标';
 Blockly.Msg.SENTRY_STATE_VALUE_WIDTH = '宽度';
@@ -92,21 +98,21 @@ Blockly.Msg.SENTRY_STATE_VALUE_R = '红色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_G = '绿色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_B = '蓝色通道';
 
-// Vision Shape Card Type
+// Sentry Shape Card Type
 Blockly.Msg.SENTRY_CARD_TICK = '钩';
 Blockly.Msg.SENTRY_CARD_CROSS = '叉';
 Blockly.Msg.SENTRY_CARD_CIRCLE = '圆形';
 Blockly.Msg.SENTRY_CARD_SQUARE = '方形';
 Blockly.Msg.SENTRY_CARD_TRIANGLE = '三角形';
 
-// Vision Traffic Card Type
+// Sentry Traffic Card Type
 Blockly.Msg.SENTRY_CARD_STRAIGHT = '向前';
 Blockly.Msg.SENTRY_CARD_TURN_LEFT = '向左';
 Blockly.Msg.SENTRY_CARD_TURN_RIGHT = '向右';
 Blockly.Msg.SENTRY_CARD_TURN_AROUND = '掉头';
 Blockly.Msg.SENTRY_CARD_STOP = '停止';
 
-// Vision Color Type
+// Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';
 Blockly.Msg.SENTRY_COLOR_RED = '红色';
