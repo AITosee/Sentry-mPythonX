@@ -587,9 +587,9 @@ Blockly.Blocks["SentryColorRcgValue"] = {
           type: "field_dropdown",
         },
         {
-          check: "Number",
+          check: "String",
           type: "input_value",
-          name: "objinfo",
+          name: "VisionType",
         },
         {
           check: "Number",
@@ -615,9 +615,9 @@ Blockly.Blocks["SentryQrRcgValue"] = {
           type: "field_dropdown",
         },
         {
-          check: "Number",
+          check: "String",
           type: "input_value",
-          name: "objid",
+          name: "VisionType",
         },
       ],
       output: null,
@@ -640,7 +640,7 @@ Blockly.Blocks["SentryGetQrCodeValue"] = {
       ],
       output: null,
       inputsInline: true,
-      message0: Blockly.Msg.SENTRY_QRRCGVALUE_MESSAGE0,
+      message0: Blockly.Msg.SENTRY_GET_QRCODEVALUE_MESSAGE0,
     });
   },
 };

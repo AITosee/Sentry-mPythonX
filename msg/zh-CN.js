@@ -38,29 +38,35 @@ Blockly.Msg.SENTRY_DETECTEDBLOB_MESSAGE0 = '%1 色块检测算法检测到 %2 �
 Blockly.Msg.SENTRY_DETECTEDCARD_MESSAGE0 = '%1 卡片识别算法检测到 %2 索引 %3';
 Blockly.Msg.SENTRY_DETECTED20CLASS_MESSAGE0 = '%1 20分类识别算法检测到 %2 索引 %3';
 
+// Sentry Vision type
+Blockly.Msg.SENTRY_VISION_VISIONCOLOR = '颜色识别';
+Blockly.Msg.SENTRY_VISION_VISIONBLOB = '色块检测';
+Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
+Blockly.Msg.SENTRY_VISION_VISIONLINE = '线段检测';
+Blockly.Msg.SENTRY_VISION_VISIONBODY = '人体识别';
+Blockly.Msg.SENTRY_VISION_VISIONCARD = '卡片识别';
+Blockly.Msg.SENTRY_VISION_VISIONFACE = '人脸识别';
+Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
+Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
+Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '物体训练与追踪';
+Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
+
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = '启用';
 Blockly.Msg.SENTRY_DISABLE = '关闭';
 
-// Sentry type
-Blockly.Msg.SENTRY_VISION_COLOR_DETECT = '色块检测';
-Blockly.Msg.SENTRY_VISION_COLOR_RECOGNITION = '颜色识别';
-Blockly.Msg.SENTRY_VISION_BALL = '球体检测';
-Blockly.Msg.SENTRY_VISION_BODY = '人体检测';
-Blockly.Msg.SENTRY_VISION_SHAPE_CARD = '形状卡片';
-Blockly.Msg.SENTRY_VISION_TRAFFIC_CARD = '交通卡片';
-Blockly.Msg.SENTRY_VISION_NUM_CARD = '数字卡片';
-
-
-Blockly.SENTRY_VISION_COLOR_DETECT = '色块检测';
-Blockly.SENTRY_VISION_COLOR_RECOGNITION = '颜色识别';
-Blockly.SENTRY_VISION_BALL = '球体检测';
-Blockly.SENTRY_VISION_BODY = '人体检测';
-Blockly.SENTRY_VISION_SHAPE_CARD = '形状卡片';
-Blockly.SENTRY_VISION_TRAFFIC_CARD = '交通卡片';
-Blockly.SENTRY_VISION_NUM_CARD = '数字卡片';
+// LED color type
+Blockly.Msg.SENTRY_LED_CLOSE = '关闭';
+Blockly.Msg.SENTRY_LED_RED = '红色';
+Blockly.Msg.SENTRY_LED_GREEN = '绿色';
+Blockly.Msg.SENTRY_LED_YELLOW = '黄色';
+Blockly.Msg.SENTRY_LED_BLUE = '蓝色';
+Blockly.Msg.SENTRY_LED_PURPLE = '紫色';
+Blockly.Msg.SENTRY_LED_CYAN = '青色';
+Blockly.Msg.SENTRY_LED_WHITE = '白色';
 
 // Sentry Config Level
+Blockly.Msg.SENTRY_LevelDefault = '自动';
 Blockly.Msg.SENTRY_Level1 = '等级1';
 Blockly.Msg.SENTRY_Level2 = '等级2';
 Blockly.Msg.SENTRY_Level3 = '等级3';
@@ -71,7 +77,6 @@ Blockly.Msg.SENTRY_Level7 = '等级7';
 Blockly.Msg.SENTRY_Level8 = '等级8';
 Blockly.Msg.SENTRY_Level9 = '等级9';
 Blockly.Msg.SENTRY_Level10 = '等级10';
-Blockly.Msg.SENTRY_LevelDefault = '自动';
 
 // Sentry Zoom Type
 Blockly.Msg.SENTRY_ZOOM_DEFAULT = '默认';
@@ -98,20 +103,6 @@ Blockly.Msg.SENTRY_STATE_VALUE_R = '红色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_G = '绿色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_B = '蓝色通道';
 
-// Sentry Shape Card Type
-Blockly.Msg.SENTRY_CARD_TICK = '钩';
-Blockly.Msg.SENTRY_CARD_CROSS = '叉';
-Blockly.Msg.SENTRY_CARD_CIRCLE = '圆形';
-Blockly.Msg.SENTRY_CARD_SQUARE = '方形';
-Blockly.Msg.SENTRY_CARD_TRIANGLE = '三角形';
-
-// Sentry Traffic Card Type
-Blockly.Msg.SENTRY_CARD_STRAIGHT = '向前';
-Blockly.Msg.SENTRY_CARD_TURN_LEFT = '向左';
-Blockly.Msg.SENTRY_CARD_TURN_RIGHT = '向右';
-Blockly.Msg.SENTRY_CARD_TURN_AROUND = '掉头';
-Blockly.Msg.SENTRY_CARD_STOP = '停止';
-
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';
@@ -123,12 +114,27 @@ Blockly.Msg.SENTRY_COLOR_BLUE = '蓝色';
 Blockly.Msg.SENTRY_COLOR_PURPLE = '紫色';
 Blockly.Msg.SENTRY_COLOR_UNKNOWN = '其他';
 
-// LED color type
-Blockly.Msg.SENTRY_LED_CLOSE = '关闭';
-Blockly.Msg.SENTRY_LED_RED = '红色';
-Blockly.Msg.SENTRY_LED_GREEN = '绿色';
-Blockly.Msg.SENTRY_LED_YELLOW = '黄色';
-Blockly.Msg.SENTRY_LED_BLUE = '蓝色';
-Blockly.Msg.SENTRY_LED_PURPLE = '紫色';
-Blockly.Msg.SENTRY_LED_CYAN = '青色';
-Blockly.Msg.SENTRY_LED_WHITE = '白色';
+// Sentry 20 Class Type
+Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ 飞机';
+Blockly.Msg.SENTRY_CLASS20_BICYCLE = '🚲 自行车';
+Blockly.Msg.SENTRY_CLASS20_BIRD = '🐦 鸟';
+Blockly.Msg.SENTRY_CLASS20_BOAT = '🚤 船';
+Blockly.Msg.SENTRY_CLASS20_BOTTLE = '🍾 瓶子';
+Blockly.Msg.SENTRY_CLASS20_BUS = ' 🚌 公交车';
+Blockly.Msg.SENTRY_CLASS20_CAR = '🚗 小汽车';
+Blockly.Msg.SENTRY_CLASS20_CAT = ' 🐱 猫';
+Blockly.Msg.SENTRY_CLASS20_CHAIR = '🪑 椅子';
+Blockly.Msg.SENTRY_CLASS20_COW = '🐄 奶牛';
+Blockly.Msg.SENTRY_CLASS20_TABLE = '🔲 桌子';
+Blockly.Msg.SENTRY_CLASS20_DOG = '🐕 狗';
+Blockly.Msg.SENTRY_CLASS20_HORSE = '🐎 马';
+Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = '🏍️ 摩托车';
+Blockly.Msg.SENTRY_CLASS20_PERSON = '🤵 人';
+Blockly.Msg.SENTRY_CLASS20_PLANT = '🪴 植物';
+Blockly.Msg.SENTRY_CLASS20_SHEEP = '🐏 羊';
+Blockly.Msg.SENTRY_CLASS20_SOFA = '🛋 沙发';
+Blockly.Msg.SENTRY_CLASS20_TRAIN = '🚆 火车';
+Blockly.Msg.SENTRY_CLASS20_MONITOR = '🖥️ 显示器';
+
+
+
