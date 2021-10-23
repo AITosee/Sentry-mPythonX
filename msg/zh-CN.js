@@ -28,15 +28,15 @@ Blockly.Msg.SENTRY_CAMERA_SET_SATURATION_MESSAGE0 = '设置 %1 图像饱和度 %
 Blockly.Msg.SENTRY_CAMERA_SET_SHAPRNESS_MESSAGE0 = '设置 %1 图像锐化 %2';
 Blockly.Msg.SENTRY_DETECTED_MESSAGE0 = '%1 算法 %2 检测结果数量';
 Blockly.Msg.SENTRY_GET_VALUE_MESSAGE0 = '%1 算法 %2 结果 %3 索引 %4';
-Blockly.Msg.SENTRY_COLORRCGVALUE_MESSAGE0 = '%1 算法颜色识别结果 %2 索引 %3';
+Blockly.Msg.SENTRY_COLORRCGVALUE_MESSAGE0 = '%1 颜色识别结果 %2 索引 %3';
 Blockly.Msg.SENTRY_QRRCGVALUE_MESSAGE0 = ' %1 二维码识别结果 %2';
 Blockly.Msg.SENTRY_GET_QRCODEVALUE_MESSAGE0 = '%1 二维码识别结果字符串';
-Blockly.Msg.SENTRY_ROWS_MESSAGE0 = '%1 图像宽度';
-Blockly.Msg.SENTRY_COLS_MESSAGE0 = '%1 图像高度';
 Blockly.Msg.SENTRY_DETECTEDCOLOR_MESSAGE0 = '%1 颜色识别算法检测到 %2 索引 %3';
 Blockly.Msg.SENTRY_DETECTEDBLOB_MESSAGE0 = '%1 色块检测算法检测到 %2 索引 %3';
 Blockly.Msg.SENTRY_DETECTEDCARD_MESSAGE0 = '%1 卡片识别算法检测到 %2 索引 %3';
 Blockly.Msg.SENTRY_DETECTED20CLASS_MESSAGE0 = '%1 20分类识别算法检测到 %2 索引 %3';
+Blockly.Msg.SENTRY_ROWS_MESSAGE0 = '%1 图像宽度';
+Blockly.Msg.SENTRY_COLS_MESSAGE0 = '%1 图像高度';
 
 // Sentry Vision type
 Blockly.Msg.SENTRY_VISION_VISIONCOLOR = '颜色识别';
@@ -107,11 +107,9 @@ Blockly.Msg.SENTRY_STATE_VALUE_B = '蓝色通道';
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';
 Blockly.Msg.SENTRY_COLOR_RED = '红色';
-Blockly.Msg.SENTRY_COLOR_YELLOW = '黄色';
 Blockly.Msg.SENTRY_COLOR_GREEN = '绿色';
-Blockly.Msg.SENTRY_COLOR_CYAN = '青色';
 Blockly.Msg.SENTRY_COLOR_BLUE = '蓝色';
-Blockly.Msg.SENTRY_COLOR_PURPLE = '紫色';
+Blockly.Msg.SENTRY_COLOR_YELLOW = '黄色';
 Blockly.Msg.SENTRY_COLOR_UNKNOWN = '其他';
 
 // Sentry 20 Class Type

@@ -1,10 +1,10 @@
 'use strict';
-goog.provide("Blockly.Blocks.VisionSensor");
+goog.provide("Blockly.Blocks.Sentry");
 goog.require("Blockly.Blocks");
 
-var VisionSensor_Color = "#EF5411";
-var VisionSensor_SetupMode_Color = "#EF5411";
-var VisionSensor_RunMode_Color = "#EAA20A";
+var Sentry_Color = "#EF5411";
+var Sentry_SetupMode_Color = "#EF5411";
+var Sentry_RunMode_Color = "#EAA20A";
 
 var sentry = [
   ["SENTRY#0", "0"],
@@ -17,7 +17,7 @@ var sentry = [
 Blockly.Blocks["SentryBegin"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -48,7 +48,7 @@ Blockly.Blocks["SentryBegin"] = {
 Blockly.Blocks["SentrySetDefault"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -68,18 +68,22 @@ Blockly.Blocks["SentrySetDefault"] = {
 Blockly.Blocks["SentryVisionType"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "VisionType",
           options: [
-            [Blockly.Msg.SENTRY_VISION_COLOR_DETECT, "VISION_COLOR_DETECT"],
-            [Blockly.Msg.SENTRY_VISION_COLOR_RECOGNITION, "VISION_COLOR_RECOGNITION"],
-            [Blockly.Msg.SENTRY_VISION_BALL, "VISION_BALL_DETECT"],
-            [Blockly.Msg.SENTRY_VISION_BODY, "VISION_BODY_DETECT"],
-            [Blockly.Msg.SENTRY_VISION_SHAPE_CARD, "VISION_SHAPE_CARD_DETECT"],
-            [Blockly.Msg.SENTRY_VISION_TRAFFIC_CARD, "VISION_TRAFFIC_CARD_DETECT"],
-            [Blockly.Msg.SENTRY_VISION_NUM_CARD, "VISION_NUM_CARD_DETECT"],
+            [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "sentry_vision_value.kVisionColor"],
+            [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "sentry_vision_value.kVisionBlob"],
+            [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "sentry_vision_value.kVisionAprilTag"],
+            [Blockly.Msg.SENTRY_VISION_VISIONLINE, "sentry_vision_value.kVisionLine"],
+            [Blockly.Msg.SENTRY_VISION_VISIONBODY, "sentry_vision_value.kVisionBody"],
+            [Blockly.Msg.SENTRY_VISION_VISIONCARD, "sentry_vision_value.kVisionCard"],
+            [Blockly.Msg.SENTRY_VISION_VISIONFACE, "sentry_vision_value.kVisionFace"],
+            [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "sentry_vision_value.kVision20Classes"],
+            [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "sentry_vision_value.kVisionQrCode"],
+            [Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK, "sentry_vision_value.kVisionObjTrack"],
+            [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "sentry_vision_value.kVisionMotionDetect"],
           ],
           type: "field_dropdown",
         },
@@ -94,7 +98,7 @@ Blockly.Blocks["SentryVisionType"] = {
 Blockly.Blocks["SentryVisionSetStatus"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -126,7 +130,7 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
 Blockly.Blocks["SentrySetParamNum"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -152,10 +156,89 @@ Blockly.Blocks["SentrySetParamNum"] = {
   },
 };
 
-Blockly.Blocks["SetParam"] = {
+Blockly.Blocks["SentryColorParam"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          check: "Number",
+          type: "input_value",
+          name: "x",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "y",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "w",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "h",
+        },
+      ],
+      output: "String",
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_COLORPARAM_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["SentryBlodParam"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          check: "Number",
+          type: "input_value",
+          name: "w",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "h",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "l",
+        },
+      ],
+      output: "String",
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_BOLDPARAM_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["SentryFaceParam"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          check: "Number",
+          type: "input_value",
+          name: "l",
+        },
+      ],
+      output: "String",
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_FACEPARAM_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["SentrySetParam"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -168,9 +251,14 @@ Blockly.Blocks["SetParam"] = {
           name: "VisionType",
         },
         {
+          check: "String",
+          type: "input_value",
+          name: "VisionType",
+        },
+        {
           check: "Number",
           type: "input_value",
-          name: "max_num",
+          name: "objid",
         },
       ],
       nextStatement: null,
@@ -185,7 +273,7 @@ Blockly.Blocks["SetParam"] = {
 Blockly.Blocks["SentryLcdSetMode"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -213,7 +301,7 @@ Blockly.Blocks["SentryLcdSetMode"] = {
 Blockly.Blocks["SentryLedSetColor"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -265,7 +353,7 @@ Blockly.Blocks["SentryLedSetColor"] = {
 Blockly.Blocks["SentryCameraSetZoom"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -296,7 +384,7 @@ Blockly.Blocks["SentryCameraSetZoom"] = {
 Blockly.Blocks["SentryCameraSetRotate"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -323,7 +411,7 @@ Blockly.Blocks["SentryCameraSetRotate"] = {
 Blockly.Blocks["SentryCameraSetAwb"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -352,7 +440,7 @@ Blockly.Blocks["SentryCameraSetAwb"] = {
 Blockly.Blocks["SentryCameraSetFPS"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -379,7 +467,7 @@ Blockly.Blocks["SentryCameraSetFPS"] = {
 Blockly.Blocks["SentryCameraSetBrightness"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -415,7 +503,7 @@ Blockly.Blocks["SentryCameraSetBrightness"] = {
 Blockly.Blocks["SentryCameraSetContrast"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -451,7 +539,7 @@ Blockly.Blocks["SentryCameraSetContrast"] = {
 Blockly.Blocks["SentryCameraSetSaturation"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -487,7 +575,7 @@ Blockly.Blocks["SentryCameraSetSaturation"] = {
 Blockly.Blocks["SentryCameraSetShaprness"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_SetupMode_Color,
+      colour: Sentry_SetupMode_Color,
       args0: [
         {
           name: "sentry",
@@ -523,7 +611,7 @@ Blockly.Blocks["SentryCameraSetShaprness"] = {
 Blockly.Blocks["SentryDetected"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -546,7 +634,7 @@ Blockly.Blocks["SentryDetected"] = {
 Blockly.Blocks["SentryGetValue"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -559,9 +647,15 @@ Blockly.Blocks["SentryGetValue"] = {
           name: "VisionType",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          type: "field_dropdown",
+          name: "label",
+          options: [
+            [Blockly.Msg.SENTRY_STATE_VALUE_X, "sentry_obj_info_e.kXValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_Y, "sentry_obj_info_e.kYValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_WIDTH, "sentry_obj_info_e.kWidthValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT, "sentry_obj_info_e.kHeightValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_LABEL, "sentry_obj_info_e.kLabel"],
+         ],
         },
         {
           check: "Number",
@@ -579,7 +673,7 @@ Blockly.Blocks["SentryGetValue"] = {
 Blockly.Blocks["SentryColorRcgValue"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -587,9 +681,14 @@ Blockly.Blocks["SentryColorRcgValue"] = {
           type: "field_dropdown",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          type: "field_dropdown",
+          name: "label",
+          options: [
+            [Blockly.Msg.SENTRY_STATE_VALUE_R, "sentry_obj_info_e.kRValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_G, "sentry_obj_info_e.kGValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_B, "sentry_obj_info_e.kBValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_LABEL, "sentry_obj_info_e.kLabel"],
+         ],
         },
         {
           check: "Number",
@@ -607,7 +706,7 @@ Blockly.Blocks["SentryColorRcgValue"] = {
 Blockly.Blocks["SentryQrRcgValue"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -615,9 +714,14 @@ Blockly.Blocks["SentryQrRcgValue"] = {
           type: "field_dropdown",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          type: "field_dropdown",
+          name: "label",
+          options: [
+            [Blockly.Msg.SENTRY_STATE_VALUE_X, "sentry_obj_info_e.kXValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_Y, "sentry_obj_info_e.kYValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_WIDTH, "sentry_obj_info_e.kWidthValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT, "sentry_obj_info_e.kHeightValue"],
+         ],
         },
       ],
       output: null,
@@ -630,7 +734,7 @@ Blockly.Blocks["SentryQrRcgValue"] = {
 Blockly.Blocks["SentryGetQrCodeValue"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -645,46 +749,10 @@ Blockly.Blocks["SentryGetQrCodeValue"] = {
   },
 };
 
-Blockly.Blocks["SentryRows"] = {
-  init: function () {
-    this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
-      output: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_ROWS_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["SentryCols"] = {
-  init: function () {
-    this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
-      output: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_COLS_MESSAGE0,
-    });
-  },
-};
-
 Blockly.Blocks["SentryDetectedColor"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -692,9 +760,17 @@ Blockly.Blocks["SentryDetectedColor"] = {
           type: "field_dropdown",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          type: "field_dropdown",
+          name: "ColorLabel",
+          options: [
+            [Blockly.Msg.SENTRY_COLOR_BLACK, "color_label_e.kColorBlack"],
+            [Blockly.Msg.SENTRY_COLOR_WHITE, "color_label_e.kColorWhite"],
+            [Blockly.Msg.SENTRY_COLOR_RED, "color_label_e.kColorRed"],
+            [Blockly.Msg.SENTRY_COLOR_GREEN, "color_label_e.kColorGreen"],
+            [Blockly.Msg.SENTRY_COLOR_BLUE, "color_label_e.kColorBlue"],
+            [Blockly.Msg.SENTRY_COLOR_YELLOW, "color_label_e.kColorYellow"],
+            [Blockly.Msg.SENTRY_COLOR_UNKNOWN, "color_label_e.kColorUnkown"],
+          ],
         },
         {
           check: "Number",
@@ -712,7 +788,7 @@ Blockly.Blocks["SentryDetectedColor"] = {
 Blockly.Blocks["SentryDetectedBlob"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -720,9 +796,17 @@ Blockly.Blocks["SentryDetectedBlob"] = {
           type: "field_dropdown",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          type: "field_dropdown",
+          name: "ColorLabel",
+          options: [
+            [Blockly.Msg.SENTRY_COLOR_BLACK, "color_label_e.kColorBlack"],
+            [Blockly.Msg.SENTRY_COLOR_WHITE, "color_label_e.kColorWhite"],
+            [Blockly.Msg.SENTRY_COLOR_RED, "color_label_e.kColorRed"],
+            [Blockly.Msg.SENTRY_COLOR_GREEN, "color_label_e.kColorGreen"],
+            [Blockly.Msg.SENTRY_COLOR_BLUE, "color_label_e.kColorBlue"],
+            [Blockly.Msg.SENTRY_COLOR_YELLOW, "color_label_e.kColorYellow"],
+            [Blockly.Msg.SENTRY_COLOR_UNKNOWN, "color_label_e.kColorUnkown"],
+          ],
         },
         {
           check: "Number",
@@ -740,7 +824,7 @@ Blockly.Blocks["SentryDetectedBlob"] = {
 Blockly.Blocks["SentryDetectedCard"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -768,7 +852,7 @@ Blockly.Blocks["SentryDetectedCard"] = {
 Blockly.Blocks["SentryDetected20Class"] = {
   init: function () {
     this.jsonInit({
-      colour: VisionSensor_RunMode_Color,
+      colour: Sentry_RunMode_Color,
       args0: [
         {
           name: "sentry",
@@ -776,9 +860,30 @@ Blockly.Blocks["SentryDetected20Class"] = {
           type: "field_dropdown",
         },
         {
-          check: "String",
-          type: "input_value",
-          name: "VisionType",
+          name: "card",
+          options: [
+            [Blockly.Msg.SENTRY_CLASS20_AIRPLANE, "class20_label_e.kAirplane"],
+            [Blockly.Msg.SENTRY_CLASS20_BICYCLE, "class20_label_e.kBicycle"],
+            [Blockly.Msg.SENTRY_CLASS20_BIRD, "class20_label_e.kBird"],
+            [Blockly.Msg.SENTRY_CLASS20_BOAT, "class20_label_e.kBoat"],
+            [Blockly.Msg.SENTRY_CLASS20_BOTTLE, "class20_label_e.kBus"],
+            [Blockly.Msg.SENTRY_CLASS20_BUS, "class20_label_e.kCar"],
+            [Blockly.Msg.SENTRY_CLASS20_CAR, "class20_label_e.kCat"],
+            [Blockly.Msg.SENTRY_CLASS20_CAT, "class20_label_e.kChair"],
+            [Blockly.Msg.SENTRY_CLASS20_CHAIR, "class20_label_e.kCow"],
+            [Blockly.Msg.SENTRY_CLASS20_COW, "class20_label_e.kTable"],
+            [Blockly.Msg.SENTRY_CLASS20_TABLE, "class20_label_e.kDog"],
+            [Blockly.Msg.SENTRY_CLASS20_DOG, "class20_label_e.kHorse"],
+            [Blockly.Msg.SENTRY_CLASS20_HORSE, "class20_label_e.kMotorBike"],
+            [Blockly.Msg.SENTRY_CLASS20_MOTORBIKE, "class20_label_e.kPerson"],
+            [Blockly.Msg.SENTRY_CLASS20_PERSON, "class20_label_e.kPlant"],
+            [Blockly.Msg.SENTRY_CLASS20_PLANT, "class20_label_e.kSheep"],
+            [Blockly.Msg.SENTRY_CLASS20_SHEEP, "class20_label_e.kSheep"],
+            [Blockly.Msg.SENTRY_CLASS20_SOFA, "class20_label_e.kSofa"],
+            [Blockly.Msg.SENTRY_CLASS20_TRAIN, "class20_label_e.kTrain"],
+            [Blockly.Msg.SENTRY_CLASS20_MONITOR, "class20_label_e.kMonitor"],
+          ],
+          type: "field_dropdown",
         },
         {
           check: "Number",
@@ -789,6 +894,42 @@ Blockly.Blocks["SentryDetected20Class"] = {
       output: null,
       inputsInline: true,
       message0: Blockly.Msg.SENTRY_DETECTED20CLASS_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["SentryRows"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_RunMode_Color,
+      args0: [
+        {
+          name: "sentry",
+          options: sentry,
+          type: "field_dropdown",
+        },
+      ],
+      output: null,
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_ROWS_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["SentryCols"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_RunMode_Color,
+      args0: [
+        {
+          name: "sentry",
+          options: sentry,
+          type: "field_dropdown",
+        },
+      ],
+      output: null,
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY_COLS_MESSAGE0,
     });
   },
 };
