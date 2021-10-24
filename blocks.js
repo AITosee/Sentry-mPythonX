@@ -7,13 +7,13 @@ var Sentry_SetupMode_Color = "#EF5411";
 var Sentry_RunMode_Color = "#EAA20A";
 
 var sentry = [
-  ["SENTRY#0", "0"],
-  ["SENTRY#1", "1"],
-  ["SENTRY#2", "2"],
-  ["SENTRY#3", "3"],
+  ["Sentry#0", "0"],
+  ["Sentry#1", "1"],
+  ["Sentry#2", "2"],
+  ["Sentry#3", "3"],
 ];
 
-// 初始化 SENTRY
+// 初始化 Sentry
 Blockly.Blocks["SentryBegin"] = {
   init: function () {
     this.jsonInit({
