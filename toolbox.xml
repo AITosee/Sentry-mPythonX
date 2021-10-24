@@ -99,6 +99,7 @@
     <block type="SentryCameraSetContrast"></block>
     <block type="SentryCameraSetSaturation"></block>
     <block type="SentryCameraSetShaprness"></block>
+    <block type="SentryUartSetBaudrate"></block>
   </category>
   <category id="morpxSentry_Run" name="{$CATEGORY_MORPX_SENTRY_RUN}" colour="#EAA20A">
     <block type="SentryDetected">

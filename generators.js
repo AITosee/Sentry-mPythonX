@@ -62,7 +62,7 @@ Blockly.Python['SentryColorParam'] = function (block) {
   var w = Blockly.Python.valueToCode(block, "w", Blockly.Python.ORDER_NONE) || '1';
   var h = Blockly.Python.valueToCode(block, "h", Blockly.Python.ORDER_NONE) || '1';
 
-  var code = 'sentry_vision_value.kVisionColor, [' + x + ', ' + y + ', ' + w + ', ' + h + ', 0]';
+  var code = 'sentry_vision_e.kVisionColor, [' + x + ', ' + y + ', ' + w + ', ' + h + ', 0]';
 
   return [code, Blockly.Python.ORDER_ATOMIC];
 };
@@ -74,7 +74,7 @@ Blockly.Python['SentryBlodParam'] = function (block) {
   var h = Blockly.Python.valueToCode(block, "g", Blockly.Python.ORDER_NONE) || '1';
   var l = Blockly.Python.valueToCode(block, "l", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = 'sentry_vision_value.kVisionBlob, ' + '[0, 0, ' + w + ', ' + h + ', ' + l + ']';
+  var code = 'sentry_vision_e.kVisionBlob, ' + '[0, 0, ' + w + ', ' + h + ', ' + l + ']';
 
   return [code, Blockly.Python.ORDER_ATOMIC];
 };
@@ -84,7 +84,7 @@ Blockly.Python['SentryFaceParam'] = function (block) {
 
   var l = Blockly.Python.valueToCode(block, "l", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = 'sentry_vision_value.kVisionFace, ' + '[0, 0, 0, 0, ' + l + ']';
+  var code = 'sentry_vision_e.kVisionFace, ' + '[0, 0, 0, 0, ' + l + ']';
 
   return [code, Blockly.Python.ORDER_ATOMIC];
 };
@@ -224,6 +224,19 @@ Blockly.Python['SentryCameraSetShaprness'] = function (block) {
   return code;
 };
 
+Blockly.Python['SentryUartSetBaudrate'] = function (block) {
+
+  var sentry = block.getFieldValue('sentry');
+  var buad = block.getFieldValue('buad');
+
+  var code = 'sentry' + sentry + '.UartSetBaudrate(' + buad + ')\n';
+
+  Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
+  Blockly.Python.functions_['init_Sentry' + sentry] = 'sentry' + sentry + ' = Sentry2(0x6' + sentry + ')';
+
+  return code;
+};
+
 Blockly.Python['SentryDetected'] = function (block) {
   var sentry = block.getFieldValue('sentry');
   var VisionType = Blockly.Python.valueToCode(block, 'VisionType', Blockly.Python.ORDER_ATOMIC);
@@ -250,7 +263,7 @@ Blockly.Python['SentryColorRcgValue'] = function (block) {
   var sentry = block.getFieldValue('sentry');
   var objinfo = block.getFieldValue('objinfo');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
-  var code = 'sentry' + sentry + '.GetValue(sentry_vision_value.kVisionColor, ' + objinfo + ', ' + objid + ')';
+  var code = 'sentry' + sentry + '.GetValue(sentry_vision_e.kVisionColor, ' + objinfo + ', ' + objid + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -260,7 +273,7 @@ Blockly.Python['SentryColorRcgValue'] = function (block) {
 Blockly.Python['SentryQrRcgValue'] = function (block) {
   var sentry = block.getFieldValue('sentry');
   var objinfo = block.getFieldValue('objinfo');
-  var code = 'sentry' + sentry + '.GetValue(sentry_vision_value.kVisionQrCode, ' + objinfo + ')';
+  var code = 'sentry' + sentry + '.GetValue(sentry_vision_e.kVisionQrCode, ' + objinfo + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -282,7 +295,7 @@ Blockly.Python['SentryDetectedColor'] = function (block) {
   var ColorLabel = block.getFieldValue('ColorLabel');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry' + sentry + '.GetValue(sentry_vision_value.kVisionColor, sentry_obj_info_e.kLabel, ' + objid + ') == ' + ColorLabel + ')';
+  var code = '(sentry' + sentry + '.GetValue(sentry_vision_e.kVisionColor, sentry_obj_info_e.kLabel, ' + objid + ') == ' + ColorLabel + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -294,7 +307,7 @@ Blockly.Python['SentryDetectedBlob'] = function (block) {
   var ColorLabel = block.getFieldValue('ColorLabel');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry' + sentry + '.GetValue(sentry_vision_value.kVisionBlob, sentry_obj_info_e.kLabel, ' + objid + ') == ' + ColorLabel + ')';
+  var code = '(sentry' + sentry + '.GetValue(sentry_vision_e.kVisionBlob, sentry_obj_info_e.kLabel, ' + objid + ') == ' + ColorLabel + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -306,7 +319,7 @@ Blockly.Python['SentryDetectedCard'] = function (block) {
   var card = block.getFieldValue('card');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry' + sentry + '.GetValue(sentry_vision_value.kVisionCard, sentry_obj_info_e.kLabel, ' + objid + ') == ' + card + ')';
+  var code = '(sentry' + sentry + '.GetValue(sentry_vision_e.kVisionCard, sentry_obj_info_e.kLabel, ' + objid + ') == ' + card + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -319,7 +332,7 @@ Blockly.Python['SentryDetected20Class'] = function (block) {
   var card = block.getFieldValue('card');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry' + sentry + '.GetValue(sentry_vision_value.kVision20Classes, sentry_obj_info_e.kLabel, ' + objid + ') == ' + card + ')';
+  var code = '(sentry' + sentry + '.GetValue(sentry_vision_e.kVision20Classes, sentry_obj_info_e.kLabel, ' + objid + ') == ' + card + ')';
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 

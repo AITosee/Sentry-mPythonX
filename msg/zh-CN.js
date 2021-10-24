@@ -26,6 +26,7 @@ Blockly.Msg.SENTRY_CAMERA_SET_BRIGHTNESS_MESSAGE0 = '设置 %1 图像亮度 %2';
 Blockly.Msg.SENTRY_CAMERA_SET_CONTRAST_MESSAGE0 = '设置 %1 图像对比度 %2';
 Blockly.Msg.SENTRY_CAMERA_SET_SATURATION_MESSAGE0 = '设置 %1 图像饱和度 %2';
 Blockly.Msg.SENTRY_CAMERA_SET_SHAPRNESS_MESSAGE0 = '设置 %1 图像锐化 %2';
+Blockly.Msg.SENTRY_UART_SET_BAUDRATE_MESSAGE0 = '设置 %1 串口波特率 %2';
 Blockly.Msg.SENTRY_DETECTED_MESSAGE0 = '%1 算法 %2 检测结果数量';
 Blockly.Msg.SENTRY_GET_VALUE_MESSAGE0 = '%1 算法 %2 结果 %3 索引 %4';
 Blockly.Msg.SENTRY_COLORRCGVALUE_MESSAGE0 = '%1 颜色识别结果 %2 索引 %3';
