@@ -72,8 +72,8 @@
     </block>    
     <!-- 设置 算法参数-->
     <block type="SentrySetParam">
-      <value name="VisionType">
-        <shadow type="SentryVisionType"></shadow>
+      <value name="prama">
+        <shadow type="None"></shadow>
       </value>
       <value name="objid">
         <shadow type="math_number">
