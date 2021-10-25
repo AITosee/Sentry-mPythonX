@@ -70,11 +70,11 @@ Blockly.Python['SentryColorParam'] = function (block) {
 
 // Blod 算法参数
 Blockly.Python['SentryBlodParam'] = function (block) {
-  var w = Blockly.Python.valueToCode(block, "h", Blockly.Python.ORDER_NONE) || '1';
-  var h = Blockly.Python.valueToCode(block, "g", Blockly.Python.ORDER_NONE) || '1';
-  var l = Blockly.Python.valueToCode(block, "l", Blockly.Python.ORDER_NONE) || '0';
+  var w = Blockly.Python.valueToCode(block, "w", Blockly.Python.ORDER_NONE) || '1';
+  var h = Blockly.Python.valueToCode(block, "h", Blockly.Python.ORDER_NONE) || '1';
+  var lable = block.getFieldValue('lable');
 
-  var code = 'sentry_vision_e.kVisionBlob, ' + '[0, 0, ' + w + ', ' + h + ', ' + l + ']';
+  var code = 'sentry_vision_e.kVisionBlob, ' + '[0, 0, ' + w + ', ' + h + ', ' + lable + ']';
 
   return [code, Blockly.Python.ORDER_ATOMIC];
 };

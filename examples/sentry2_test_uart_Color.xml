@@ -1,0 +1,433 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="mpython_uart_init" id="2Akn~|)xP=+ziZsl3DeS" x="-340" y="-872">
+    <field name="uart_name">uart1</field>
+    <value name="baudrate">
+      <shadow type="mpython_baudrate" id="JK}e)~2QMO@h4gi`T0tq">
+        <field name="baudrate">115200</field>
+      </shadow>
+    </value>
+    <value name="tx">
+      <shadow type="uart_tx_pin" id="STR*7gd9-x]67rx.+_I]">
+        <field name="uart_tx_pin">14</field>
+      </shadow>
+    </value>
+    <value name="rx">
+      <shadow type="uart_rx_pin" id="|34/K(yHS,Al3%cH-x*/">
+        <field name="uart_rx_pin">13</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="SentryUartSetBaudrate" id="T|C-;=jJqnwaSy95-.BZ">
+        <field name="sentry">0</field>
+        <field name="buad">sentry_baudrate_e.kBaud115200</field>
+        <next>
+          <block type="SentryBegin" id="zZ}`)ThE5810L5vIOHd`">
+            <field name="sentry">0</field>
+            <field name="InitType">uart1</field>
+            <next>
+              <block type="SentrySetDefault" id="LHPMx#WD4P*VgHlc_nB|">
+                <field name="sentry">0</field>
+                <next>
+                  <block type="SentryVisionSetStatus" id="y9])Q9pqT!qP?OVB9qO1">
+                    <field name="sentry">0</field>
+                    <field name="VisionStatus">Begin</field>
+                    <value name="VisionType">
+                      <shadow type="SentryVisionType" id="o9XJnvm-8/O]h*l0l%=!">
+                        <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="SentrySetParamNum" id="~BS@7_h0=;y?R{h.tx;^">
+                        <field name="sentry">0</field>
+                        <value name="VisionType">
+                          <shadow type="SentryVisionType" id="0:.K*GD)3ACI?]`HPK(.">
+                            <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                          </shadow>
+                        </value>
+                        <value name="max_num">
+                          <shadow type="math_number" id="9oAwiKXBD##KDeS8e02m">
+                            <field name="NUM">4</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="SentrySetParam" id="}nz%#_`8X@dsnPkRd]@%">
+                            <field name="sentry">0</field>
+                            <value name="prama">
+                              <block type="SentryColorParam" id="dbiV?1nn3K^Y^ryd(IdK">
+                                <value name="x">
+                                  <shadow type="math_number" id="oV@[iwbstu`gkZu1I_)(">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                                <value name="y">
+                                  <shadow type="math_number" id="|gR+2H0Ap#4_qSUZ|F|B">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                                <value name="w">
+                                  <shadow type="math_number" id="ci=NQq~{L2[V%?Uy[C#E">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                                <value name="h">
+                                  <shadow type="math_number" id=")v#$_eb]uNbkmU;!5qrn">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="objid">
+                              <shadow type="math_number" id="C:6*$CflkT3o/cNyL$oC">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="SentrySetParam" id="vYYp6vth?g5=H[N/qfgS">
+                                <field name="sentry">0</field>
+                                <value name="prama">
+                                  <block type="SentryColorParam" id="(L=4[+r$@ghk7wA$?Z!z">
+                                    <value name="x">
+                                      <shadow type="math_number" id="SXBoh[:ssk_n2p=M8]=i">
+                                        <field name="NUM">20</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="y">
+                                      <shadow type="math_number" id="9_D]FiK?Zql3mmR^AC}V">
+                                        <field name="NUM">30</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="w">
+                                      <shadow type="math_number" id="ZX;q%dlM?+@t~lV.GIQq">
+                                        <field name="NUM">8</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="h">
+                                      <shadow type="math_number" id="C*vg$Z4zdbEA^m]]+0{j">
+                                        <field name="NUM">8</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="objid">
+                                  <shadow type="math_number" id="trz%M-%I8^/fo(~xO+KL">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="SentrySetParam" id="K^{~8SuOTS#}6?PZh4os">
+                                    <field name="sentry">0</field>
+                                    <value name="prama">
+                                      <block type="SentryColorParam" id="z5tKG|Y|*X-qhxjUljyz">
+                                        <value name="x">
+                                          <shadow type="math_number" id="m{U[6I:jYGX/s4]ye#!N">
+                                            <field name="NUM">60</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="y">
+                                          <shadow type="math_number" id="]B3s}~c4{[Dhf`My/#Ov">
+                                            <field name="NUM">60</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="w">
+                                          <shadow type="math_number" id="4{4#:~w]UHBc])+z})|`">
+                                            <field name="NUM">10</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="h">
+                                          <shadow type="math_number" id="nXFBg[Fj9y,mk|1{h]yT">
+                                            <field name="NUM">10</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="objid">
+                                      <shadow type="math_number" id="`F]Wni3kv90uYizs]98M">
+                                        <field name="NUM">2</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="SentrySetParam" id="M/Qub]`{WHoVg=pwJ7#H">
+                                        <field name="sentry">0</field>
+                                        <value name="prama">
+                                          <block type="SentryColorParam" id="6%EMSSbGonM3O1+hx$%{">
+                                            <value name="x">
+                                              <shadow type="math_number" id="hqou$`pU0cM(jJ^2E7u?">
+                                                <field name="NUM">100</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="y">
+                                              <shadow type="math_number" id="cD%;FRj;Xy8zj-%`()7:">
+                                                <field name="NUM">100</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="w">
+                                              <shadow type="math_number" id="IER5R1r*e4KVK}L_fJ]G">
+                                                <field name="NUM">15</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="h">
+                                              <shadow type="math_number" id="[7AJl)M@D#;j.a4TW9U_">
+                                                <field name="NUM">15</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="objid">
+                                          <shadow type="math_number" id="5Iu1:iE$tLt7H-k!kdGC">
+                                            <field name="NUM">3</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="SentryCameraSetZoom" id="0+Y_|!BXt6Kt3P5TS^!=">
+                                            <field name="sentry">0</field>
+                                            <field name="ZoomLevel">sentry_camera_zoom_e.kZoom3</field>
+                                            <next>
+                                              <block type="controls_repeat_forever" id="#0a^fLoULAn~-iB!V:K=">
+                                                <statement name="DO">
+                                                  <block type="controls_for" id="x)|!Fi](k#;TSi$GDILO">
+                                                    <field name="VAR">i</field>
+                                                    <value name="FROM">
+                                                      <shadow type="math_number" id="lysJ6X0siA9L5beL#J8G">
+                                                        <field name="NUM">0</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="TO">
+                                                      <shadow type="math_number" id="e]=X6$~Od1If!c{)qe+!">
+                                                        <field name="NUM">10</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="}6L)y$^?NO8DC~{oJP,+">
+                                                        <field name="OP">MINUS</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="Juc%gGiF:GkJSln$3JK:">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="SentryDetected" id="l*3XcPD@ibjp6QG,h!1U">
+                                                            <field name="sentry">0</field>
+                                                            <value name="VisionType">
+                                                              <shadow type="SentryVisionType" id="]f,}S7bU4?K!u.jLpP1m">
+                                                                <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="#s]BX=6AU05YJM-}8oJ-">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="BY">
+                                                      <shadow type="math_number" id="e{CI;%#en+-`}s/jW],D">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <statement name="DO">
+                                                      <block type="controls_if" id="fN9iJEZwc@DY,6K-UFR;">
+                                                        <mutation else="1"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="SentryDetectedColor" id="F]FSbg~[Y_ouCg.a%+5n">
+                                                            <field name="sentry">0</field>
+                                                            <field name="ColorLabel">color_label_e.kColorBlack</field>
+                                                            <value name="objid">
+                                                              <shadow type="math_number" id="1p7jT*kU0#i_.,F2LDVt">
+                                                                <field name="NUM">0</field>
+                                                              </shadow>
+                                                              <block type="variables_get" id="9L},USNrQR1LVSu%8,BJ">
+                                                                <field name="VAR">i</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="text_print" id="LU^t_zRv$K8a30le9|09">
+                                                            <value name="TEXT">
+                                                              <shadow type="text" id="wAVaN16uu(+0O~ki-%^{">
+                                                                <field name="TEXT"></field>
+                                                              </shadow>
+                                                              <block type="text_format2" id=":XNVJf`M.)Q3F#aYu3Sv">
+                                                                <value name="FORMAT">
+                                                                  <shadow type="text" id="pj7#K46Gj%X*^62HZagh">
+                                                                    <field name="TEXT">b {}: r :{} g: {} b: {} l :{}</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="CONTENT">
+                                                                  <block type="tuple_create_with_items_insert" id="z2.TAD%!mlF+K|%|QWY@">
+                                                                    <mutation items="5"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="variables_get" id="?L3U8WfH$bq]2NOtpg)R">
+                                                                        <field name="VAR">i</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="SentryColorRcgValue" id="jOttmJQz3mke@e;#sX#x">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kRValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="ECLU9Y6v%*b2%0s]I1q0">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD2">
+                                                                      <block type="SentryColorRcgValue" id="*|5RI}g#8zUTD@P;@k`.">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kGValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="pj?6r+cU.zWe2(lQ=#4J">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD3">
+                                                                      <block type="SentryColorRcgValue" id="L%G8}^Yway`s=ZE-I49~">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kBValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="^#Z{2=au^z?U/KRp%w%*">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD4">
+                                                                      <block type="SentryColorRcgValue" id="p(RHC+V7mMXkjh=C+it;">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kLabel</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="-mb#G9Rv6-?~V?grnDoa">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                          <block type="text_print" id="L.852WS~=-9g~C*2R}Ar">
+                                                            <value name="TEXT">
+                                                              <shadow type="text" id="wAVaN16uu(+0O~ki-%^{">
+                                                                <field name="TEXT"></field>
+                                                              </shadow>
+                                                              <block type="text_format2" id=";~uCdiPN7)zk-rngcbrW">
+                                                                <value name="FORMAT">
+                                                                  <shadow type="text" id="DMeDÜ{O6n!p74HpWBo">
+                                                                    <field name="TEXT">u {}: r: {} g :{} b: {} l: {}</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="CONTENT">
+                                                                  <block type="tuple_create_with_items_insert" id=",}BlQf;sB9A?:Lq]u(tG">
+                                                                    <mutation items="5"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="variables_get" id="EyX~MCXc?;?Uv({OaqcB">
+                                                                        <field name="VAR">i</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="SentryColorRcgValue" id="r13,Jr6?=N@4Qa*B/asg">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kRValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="P80f6g{JTo+m9E^n#f#l">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD2">
+                                                                      <block type="SentryColorRcgValue" id="id|Bx)Yq)SusTcS#YWU:">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kGValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="u$MA*n6_M}t{KLqe7dy^">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD3">
+                                                                      <block type="SentryColorRcgValue" id=",n`p+HE`~BGeDg]i8soB">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kBValue</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="+3U78(cC,^JQ8^I|IzLa">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD4">
+                                                                      <block type="SentryColorRcgValue" id="_2*osOtlAR8n,lh*W19y">
+                                                                        <field name="sentry">0</field>
+                                                                        <field name="objinfo">sentry_obj_info_e.kLabel</field>
+                                                                        <value name="objid">
+                                                                          <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
+                                                                            <field name="NUM">0</field>
+                                                                          </shadow>
+                                                                          <block type="variables_get" id="lP-QUsi*T0hR}n8tl/M!">
+                                                                            <field name="VAR">i</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                      </block>
+                                                    </statement>
+                                                  </block>
+                                                </statement>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
