@@ -77,7 +77,7 @@ Blockly.Blocks["SentryVisionType"] = {
             [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "sentry_vision_e.kVisionBlob"],
             [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "sentry_vision_e.kVisionAprilTag"],
             [Blockly.Msg.SENTRY_VISION_VISIONLINE, "sentry_vision_e.kVisionLine"],
-            [Blockly.Msg.SENTRY_VISION_VISIONBODY, "sentry_vision_e.kVisionBody"],
+            [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "sentry_vision_e.kVisionLearning"],
             [Blockly.Msg.SENTRY_VISION_VISIONCARD, "sentry_vision_e.kVisionCard"],
             [Blockly.Msg.SENTRY_VISION_VISIONFACE, "sentry_vision_e.kVisionFace"],
             [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "sentry_vision_e.kVision20Classes"],
