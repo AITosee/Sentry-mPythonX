@@ -10,6 +10,7 @@ Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化视觉传感器，并选择相�
 // 设置模块文本
 Blockly.Msg.SENTRY_BEGIN_MESSAGE0 = '初始化 %1 端口 %2';
 Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0 = ' %1 恢复默认参数';
+Blockly.Msg.SENTRY_SET_COORD_TYPE_MESSAGE0 = ' %1 设置输出坐标模式 %2';
 Blockly.Msg.SENTRY_VISION_SET_STATUS_MESSAGE0 = '%1 %2 算法 %3';
 Blockly.Msg.SENTRY_SET_PARAMNUM_MESSAGE0 = '设置 %1 算法 %2 参数个数 %3';
 Blockly.Msg.SENTRY_SET_PARAM_MESSAGE0 = '设置 %1 算法参数 %2 索引 %3';
@@ -51,6 +52,9 @@ Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
 Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '物体训练与追踪';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
+
+Blockly.Msg.SENTRY_ABSOLUTE_COORDINATE = '绝对坐标'
+Blockly.Msg.SENTRY_PERCENT_AGECOORDINATE = '相对坐标'
 
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = '启用';

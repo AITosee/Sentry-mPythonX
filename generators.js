@@ -25,6 +25,17 @@ Blockly.Python['SentrySetDefault'] = function (block) {
   return code;
 };
 
+// 设置
+Blockly.Python['SeneorSetCoordinateType'] = function (block) {
+  var sentry = block.getFieldValue('sentry');
+  var coordinate = block.getFieldValue('CoordinateType')|0;
+  var code = 'sentry' + sentry + `.SeneorSetCoordinateType(${coordinate})\n`;
+
+  Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
+
+  return code;
+};
+
 // 算法类型
 Blockly.Python['SentryVisionType'] = function (block) {
   var code = block.getFieldValue('VisionType');

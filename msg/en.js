@@ -10,6 +10,7 @@ Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = 'Initialize the vision sensor and select 
 // set模块文本
 Blockly.Msg.SENTRY_BEGIN_MESSAGE0 = 'initialize %1  mode %2';
 Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0 = 'restore %1  defaultsettings';
+Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0 = '%1 set coordinate type %2';
 Blockly.Msg.SENTRY_VISION_SET_STATUS_MESSAGE0 = '%1 %2 algorithm %3';
 Blockly.Msg.SENTRY_SET_PARAMNUM_MESSAGE0 = 'set %1 algorithm %2 param max num %3';
 Blockly.Msg.SENTRY_SET_PARAM_MESSAGE0 = 'set %1 algorithm param %2 index %3';
@@ -51,6 +52,9 @@ Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20Classes';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = 'QrCode';
 Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = 'ObjTrack';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = 'MotionDetect';
+
+Blockly.Msg.SENTRY_ABSOLUTE_COORDINATE = 'AbsoluteCoordinate'
+Blockly.Msg.SENTRY_PERCENT_AGECOORDINATE = 'PercentageCoordinate'
 
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = 'Enable';

@@ -64,6 +64,33 @@ Blockly.Blocks["SentrySetDefault"] = {
   },
 };
 
+Blockly.Blocks["SeneorSetCoordinateType"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          name: "sentry",
+          options: sentry,
+          type: "field_dropdown",
+        },
+        {
+          name: "CoordinateType",
+          options: [
+            [Blockly.Msg.SENTRY_ABSOLUTE_COORDINATE, 0],
+            [Blockly.Msg.SENTRY_PERCENT_AGECOORDINATE, 1],
+          ],
+          type: "field_dropdown",
+        },
+      ],
+      message0: Blockly.Msg.SENTRY_SET_COORD_TYPE_MESSAGE0,
+      inputsInline: true,
+      nextStatement: null,
+      previousStatement: null,
+    });
+  },
+};
+
 // 算法类型
 Blockly.Blocks["SentryVisionType"] = {
   init: function () {

@@ -9,7 +9,8 @@
       <value name="VisionType">
         <shadow type="SentryVisionType"></shadow>
       </value>
-    </block>    
+    </block>   
+    <block type="SeneorSetCoordinateType"></block>     
     <!-- 设置 算法参数个数-->
     <block type="SentrySetParamNum">
       <value name="VisionType">
