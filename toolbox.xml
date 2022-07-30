@@ -26,22 +26,22 @@
     <block type="SentryColorParam">
       <value name="x">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">120</field>
         </shadow>
       </value>
       <value name="y">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">120</field>
         </shadow>
       </value>
       <value name="w">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">20</field>
         </shadow>
       </value>
       <value name="h">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">20</field>
         </shadow>
       </value>
     </block>    
@@ -49,12 +49,12 @@
     <block type="SentryBlodParam">
       <value name="w">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">15</field>
         </shadow>
       </value>
       <value name="h">
         <shadow type="math_number">
-          <field name="NUM">1</field>
+          <field name="NUM">15</field>
         </shadow>
       </value>
     </block>    
@@ -73,29 +73,10 @@
       </value>
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-    </block>    
-    <!-- 设置 LCD-->
-    <block type="SentryLcdSetMode"></block>    
-    <!-- 设置 LED -->
-    <block type="SentryLedSetColor">
-      <value name="level">
-        <shadow type="math_number">
           <field name="NUM">1</field>
         </shadow>
       </value>
-    </block>
-    <block type="SentryCameraSetZoom"></block>
-    <block type="SentryCameraSetRotate"></block>
-    <block type="SentryCameraSetAwb"></block>
-    <block type="SentryCameraSetFPS"></block>
-    <block type="SentryCameraSetBrightness"></block>
-    <block type="SentryCameraSetContrast"></block>
-    <block type="SentryCameraSetSaturation"></block>
-    <block type="SentryCameraSetShaprness"></block>
-    <block type="SentryUartSetBaudrate"></block>
+    </block>    
   </category>
   <category id="morpxSentry_Run" name="{$CATEGORY_MORPX_SENTRY_RUN}" colour="#EAA20A">
     <block type="SentryDetected">
@@ -109,14 +90,14 @@
       </value>
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
     <block type="SentryColorRcgValue">
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
@@ -125,28 +106,28 @@
     <block type="SentryDetectedColor">
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
     <block type="SentryDetectedBlob">
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
     <block type="SentryDetectedCard">
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
     <block type="SentryDetected20Class">
       <value name="objid">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>

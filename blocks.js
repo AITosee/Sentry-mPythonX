@@ -7,10 +7,10 @@ var Sentry_SetupMode_Color = "#EF5411";
 var Sentry_RunMode_Color = "#EAA20A";
 
 var sentry = [
-  ["Sentry#0", "0"],
-  ["Sentry#1", "1"],
-  ["Sentry#2", "2"],
-  ["Sentry#3", "3"],
+  ["0x60", "0"],
+  ["0x61", "1"],
+  ["0x62", "2"],
+  ["0x63", "3"],
 ];
 
 // 初始化 Sentry
@@ -20,17 +20,17 @@ Blockly.Blocks["SentryBegin"] = {
       colour: Sentry_SetupMode_Color,
       args0: [
         {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
           name: "InitType",
           options: [
             ["i2c", "i2c"],
             ["uart1", "uart1"],
             ["uart2", "uart2"],
           ],
+          type: "field_dropdown",
+        },
+        {
+          name: "sentry",
+          options: sentry,
           type: "field_dropdown",
         },
       ],
@@ -49,13 +49,7 @@ Blockly.Blocks["SentrySetDefault"] = {
   init: function () {
     this.jsonInit({
       colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
+
       message0: Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0,
       inputsInline: true,
       nextStatement: null,
@@ -69,11 +63,7 @@ Blockly.Blocks["SeneorSetCoordinateType"] = {
     this.jsonInit({
       colour: Sentry_SetupMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           name: "CoordinateType",
           options: [
@@ -127,11 +117,7 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
     this.jsonInit({
       colour: Sentry_SetupMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           name: "VisionStatus",
           options: [
@@ -159,11 +145,7 @@ Blockly.Blocks["SentrySetParamNum"] = {
     this.jsonInit({
       colour: Sentry_SetupMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           check: "String",
           type: "input_value",
@@ -274,11 +256,7 @@ Blockly.Blocks["SentrySetParam"] = {
     this.jsonInit({
       colour: Sentry_SetupMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           check: "String",
           type: "input_value",
@@ -298,388 +276,340 @@ Blockly.Blocks["SentrySetParam"] = {
   },
 };
 
-// 设置 LCD
-Blockly.Blocks["SentryLcdSetMode"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "lcd_sw",
-          options: [
-            ["ON", "True"],
-            ["OFF", "False"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_LCD_SET_MODE_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+// // 设置 LCD
+// Blockly.Blocks["SentryLcdSetMode"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
 
-// 设置 LED
-Blockly.Blocks["SentryLedSetColor"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          check: "Number",
-          type: "input_value",
-          name: "level",
-        },
-        {
-          type: "field_dropdown",
-          name: "detected_color",
-          options: [
-            [Blockly.Msg.SENTRY_LED_CLOSE, "sentry_led_color_e.kLedClose"],
-            [Blockly.Msg.SENTRY_LED_RED, "sentry_led_color_e.kLedRed"],
-            [Blockly.Msg.SENTRY_LED_GREEN, "sentry_led_color_e.kLedGreen"],
-            [Blockly.Msg.SENTRY_LED_YELLOW, "sentry_led_color_e.kLedYellow"],
-            [Blockly.Msg.SENTRY_LED_BLUE, "sentry_led_color_e.kLedBlue"],
-            [Blockly.Msg.SENTRY_LED_PURPLE, "sentry_led_color_e.kLedPurple"],
-            [Blockly.Msg.SENTRY_LED_CYAN, "sentry_led_color_e.kLedCyan"],
-            [Blockly.Msg.SENTRY_LED_WHITE, "sentry_led_color_e.kLedWhite"],
-          ],
-        },
-        {
-          type: "field_dropdown",
-          name: "undetected_color",
-          options: [
-            [Blockly.Msg.SENTRY_LED_CLOSE, "sentry_led_color_e.kLedClose"],
-            [Blockly.Msg.SENTRY_LED_RED, "sentry_led_color_e.kLedRed"],
-            [Blockly.Msg.SENTRY_LED_GREEN, "sentry_led_color_e.kLedGreen"],
-            [Blockly.Msg.SENTRY_LED_YELLOW, "sentry_led_color_e.kLedYellow"],
-            [Blockly.Msg.SENTRY_LED_BLUE, "sentry_led_color_e.kLedBlue"],
-            [Blockly.Msg.SENTRY_LED_PURPLE, "sentry_led_color_e.kLedPurple"],
-            [Blockly.Msg.SENTRY_LED_CYAN, "sentry_led_color_e.kLedCyan"],
-            [Blockly.Msg.SENTRY_LED_WHITE, "sentry_led_color_e.kLedWhite"],
-          ],
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_LED_SET_COLOR_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+//         {
+//           name: "lcd_sw",
+//           options: [
+//             ["ON", "True"],
+//             ["OFF", "False"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_LCD_SET_MODE_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
 
-Blockly.Blocks["SentryCameraSetZoom"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "ZoomLevel",
-          options: [
-            [Blockly.Msg.SENTRY_ZOOM_DEFAULT, "sentry_camera_zoom_e.kZoomDefault"],
-            [Blockly.Msg.SENTRY_ZOOM_1, "sentry_camera_zoom_e.kZoom1"],
-            [Blockly.Msg.SENTRY_ZOOM_2, "sentry_camera_zoom_e.kZoom2"],
-            [Blockly.Msg.SENTRY_ZOOM_3, "sentry_camera_zoom_e.kZoom3"],
-            [Blockly.Msg.SENTRY_ZOOM_4, "sentry_camera_zoom_e.kZoom4"],
-            [Blockly.Msg.SENTRY_ZOOM_5, "sentry_camera_zoom_e.kZoom5"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_ZOOM_MESSAGE0,
-    });
-  },
-};
+// // 设置 LED
+// Blockly.Blocks["SentryLedSetColor"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
 
-Blockly.Blocks["SentryCameraSetRotate"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "rotate",
-          options: [
-            ["ON", "True"],
-            ["OFF", "False"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_ROTATE_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+//         {
+//           check: "Number",
+//           type: "input_value",
+//           name: "level",
+//         },
+//         {
+//           type: "field_dropdown",
+//           name: "detected_color",
+//           options: [
+//             [Blockly.Msg.SENTRY_LED_CLOSE, "sentry_led_color_e.kLedClose"],
+//             [Blockly.Msg.SENTRY_LED_RED, "sentry_led_color_e.kLedRed"],
+//             [Blockly.Msg.SENTRY_LED_GREEN, "sentry_led_color_e.kLedGreen"],
+//             [Blockly.Msg.SENTRY_LED_YELLOW, "sentry_led_color_e.kLedYellow"],
+//             [Blockly.Msg.SENTRY_LED_BLUE, "sentry_led_color_e.kLedBlue"],
+//             [Blockly.Msg.SENTRY_LED_PURPLE, "sentry_led_color_e.kLedPurple"],
+//             [Blockly.Msg.SENTRY_LED_CYAN, "sentry_led_color_e.kLedCyan"],
+//             [Blockly.Msg.SENTRY_LED_WHITE, "sentry_led_color_e.kLedWhite"],
+//           ],
+//         },
+//         {
+//           type: "field_dropdown",
+//           name: "undetected_color",
+//           options: [
+//             [Blockly.Msg.SENTRY_LED_CLOSE, "sentry_led_color_e.kLedClose"],
+//             [Blockly.Msg.SENTRY_LED_RED, "sentry_led_color_e.kLedRed"],
+//             [Blockly.Msg.SENTRY_LED_GREEN, "sentry_led_color_e.kLedGreen"],
+//             [Blockly.Msg.SENTRY_LED_YELLOW, "sentry_led_color_e.kLedYellow"],
+//             [Blockly.Msg.SENTRY_LED_BLUE, "sentry_led_color_e.kLedBlue"],
+//             [Blockly.Msg.SENTRY_LED_PURPLE, "sentry_led_color_e.kLedPurple"],
+//             [Blockly.Msg.SENTRY_LED_CYAN, "sentry_led_color_e.kLedCyan"],
+//             [Blockly.Msg.SENTRY_LED_WHITE, "sentry_led_color_e.kLedWhite"],
+//           ],
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_LED_SET_COLOR_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
 
-Blockly.Blocks["SentryCameraSetAwb"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "awb",
-          options: [
-            [Blockly.Msg.SENTRY_AUTO, "sentry_camera_white_balance_e.kAutoWhiteBalance"],
-            [Blockly.Msg.SENTRY_LOCK_AWB, "sentry_camera_white_balance_e.kLockWhiteBalance"],
-            [Blockly.Msg.SENTRY_WHITE_LIGHT, "sentry_camera_white_balance_e.kWhiteLight"],
-            [Blockly.Msg.SENTRY_YELLOW_LIGHT, "sentry_camera_white_balance_e.kYellowLight"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_AWB_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+// Blockly.Blocks["SentryCameraSetZoom"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
 
-Blockly.Blocks["SentryCameraSetFPS"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "fps",
-          options: [
-            ["ON", "True"],
-            ["OFF", "False"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_FPS_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+//         {
+//           name: "ZoomLevel",
+//           options: [
+//             [Blockly.Msg.SENTRY_ZOOM_DEFAULT, "sentry_camera_zoom_e.kZoomDefault"],
+//             [Blockly.Msg.SENTRY_ZOOM_1, "sentry_camera_zoom_e.kZoom1"],
+//             [Blockly.Msg.SENTRY_ZOOM_2, "sentry_camera_zoom_e.kZoom2"],
+//             [Blockly.Msg.SENTRY_ZOOM_3, "sentry_camera_zoom_e.kZoom3"],
+//             [Blockly.Msg.SENTRY_ZOOM_4, "sentry_camera_zoom_e.kZoom4"],
+//             [Blockly.Msg.SENTRY_ZOOM_5, "sentry_camera_zoom_e.kZoom5"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       inputsInline: true,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_ZOOM_MESSAGE0,
+//     });
+//   },
+// };
 
-Blockly.Blocks["SentryCameraSetBrightness"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "level",
-          options: [
-            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
-            [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
-            [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
-            [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
-            [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
-            [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
-            [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
-            [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
-            [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
-            [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
-            [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_BRIGHTNESS_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+// Blockly.Blocks["SentryCameraSetRotate"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
 
-Blockly.Blocks["SentryCameraSetContrast"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "level",
-          options: [
-            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
-            [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
-            [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
-            [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
-            [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
-            [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
-            [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
-            [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
-            [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
-            [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
-            [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_CONTRAST_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+//         {
+//           name: "rotate",
+//           options: [
+//             ["ON", "True"],
+//             ["OFF", "False"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_ROTATE_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
 
-Blockly.Blocks["SentryCameraSetSaturation"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "level",
-          options: [
-            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
-            [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
-            [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
-            [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
-            [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
-            [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
-            [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
-            [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
-            [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
-            [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
-            [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_SATURATION_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+// Blockly.Blocks["SentryCameraSetAwb"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
 
-Blockly.Blocks["SentryCameraSetShaprness"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "level",
-          options: [
-            [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
-            [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
-            [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
-            [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
-            [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
-            [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
-            [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
-            [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
-            [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
-            [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
-            [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_CAMERA_SET_SHAPRNESS_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+//         {
+//           name: "awb",
+//           options: [
+//             [Blockly.Msg.SENTRY_AUTO, "sentry_camera_white_balance_e.kAutoWhiteBalance"],
+//             [Blockly.Msg.SENTRY_LOCK_AWB, "sentry_camera_white_balance_e.kLockWhiteBalance"],
+//             [Blockly.Msg.SENTRY_WHITE_LIGHT, "sentry_camera_white_balance_e.kWhiteLight"],
+//             [Blockly.Msg.SENTRY_YELLOW_LIGHT, "sentry_camera_white_balance_e.kYellowLight"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_AWB_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
 
-Blockly.Blocks["SentryUartSetBaudrate"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_SetupMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-        {
-          name: "buad",
-          options: [
-            ["9600", "sentry_baudrate_e.kBaud9600"],
-            ["19200", "sentry_baudrate_e.kBaud19200"],
-            ["38400", "sentry_baudrate_e.kBaud38400"],
-            ["57600", "sentry_baudrate_e.kBaud57600"],
-            ["115200", "sentry_baudrate_e.kBaud115200"],
-            ["230400", "sentry_baudrate_e.kBaud230400"],
-            ["460800", "sentry_baudrate_e.kBaud460800"],
-            ["921600", "sentry_baudrate_e.kBaud921600"],
-          ],
-          type: "field_dropdown",
-        },
-      ],
-      nextStatement: null,
-      previousStatement: null,
-      message0: Blockly.Msg.SENTRY_UART_SET_BAUDRATE_MESSAGE0,
-      inputsInline: true,
-    });
-  },
-};
+// Blockly.Blocks["SentryCameraSetFPS"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "fps",
+//           options: [
+//             ["ON", "True"],
+//             ["OFF", "False"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_FPS_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
+
+// Blockly.Blocks["SentryCameraSetBrightness"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "level",
+//           options: [
+//             [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
+//             [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
+//             [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
+//             [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
+//             [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
+//             [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
+//             [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
+//             [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
+//             [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
+//             [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
+//             [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_BRIGHTNESS_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
+
+// Blockly.Blocks["SentryCameraSetContrast"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "level",
+//           options: [
+//             [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
+//             [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
+//             [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
+//             [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
+//             [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
+//             [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
+//             [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
+//             [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
+//             [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
+//             [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
+//             [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_CONTRAST_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
+
+// Blockly.Blocks["SentryCameraSetSaturation"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "level",
+//           options: [
+//             [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
+//             [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
+//             [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
+//             [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
+//             [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
+//             [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
+//             [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
+//             [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
+//             [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
+//             [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
+//             [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_SATURATION_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
+
+// Blockly.Blocks["SentryCameraSetShaprness"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "level",
+//           options: [
+//             [Blockly.Msg.SENTRY_LEVEL_DEFAULT, "sentry_camera_config_e.kLevelDefault"],
+//             [Blockly.Msg.SENTRY_LEVEL1, "sentry_camera_config_e.kLevel1"],
+//             [Blockly.Msg.SENTRY_LEVEL2, "sentry_camera_config_e.kLevel2"],
+//             [Blockly.Msg.SENTRY_LEVEL3, "sentry_camera_config_e.kLevel3"],
+//             [Blockly.Msg.SENTRY_LEVEL4, "sentry_camera_config_e.kLevel4"],
+//             [Blockly.Msg.SENTRY_LEVEL5, "sentry_camera_config_e.kLevel5"],
+//             [Blockly.Msg.SENTRY_LEVEL6, "sentry_camera_config_e.kLevel6"],
+//             [Blockly.Msg.SENTRY_LEVEL7, "sentry_camera_config_e.kLevel7"],
+//             [Blockly.Msg.SENTRY_LEVEL8, "sentry_camera_config_e.kLevel8"],
+//             [Blockly.Msg.SENTRY_LEVEL9, "sentry_camera_config_e.kLevel9"],
+//             [Blockly.Msg.SENTRY_LEVEL10, "sentry_camera_config_e.kLevel10"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_CAMERA_SET_SHAPRNESS_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
+
+// Blockly.Blocks["SentryUartSetBaudrate"] = {
+//   init: function () {
+//     this.jsonInit({
+//       colour: Sentry_SetupMode_Color,
+//       args0: [
+
+//         {
+//           name: "buad",
+//           options: [
+//             ["9600", "sentry_baudrate_e.kBaud9600"],
+//             ["19200", "sentry_baudrate_e.kBaud19200"],
+//             ["38400", "sentry_baudrate_e.kBaud38400"],
+//             ["57600", "sentry_baudrate_e.kBaud57600"],
+//             ["115200", "sentry_baudrate_e.kBaud115200"],
+//             ["230400", "sentry_baudrate_e.kBaud230400"],
+//             ["460800", "sentry_baudrate_e.kBaud460800"],
+//             ["921600", "sentry_baudrate_e.kBaud921600"],
+//           ],
+//           type: "field_dropdown",
+//         },
+//       ],
+//       nextStatement: null,
+//       previousStatement: null,
+//       message0: Blockly.Msg.SENTRY_UART_SET_BAUDRATE_MESSAGE0,
+//       inputsInline: true,
+//     });
+//   },
+// };
 
 Blockly.Blocks["SentryDetected"] = {
   init: function () {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           check: "String",
           type: "input_value",
@@ -698,11 +628,6 @@ Blockly.Blocks["SentryGetValue"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
         {
           check: "String",
           type: "input_value",
@@ -737,11 +662,7 @@ Blockly.Blocks["SentryColorRcgValue"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           type: "field_dropdown",
           name: "objinfo",
@@ -770,11 +691,7 @@ Blockly.Blocks["SentryQrRcgValue"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           type: "field_dropdown",
           name: "objinfo",
@@ -797,13 +714,7 @@ Blockly.Blocks["SentryGetQrCodeValue"] = {
   init: function () {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
+
       output: null,
       inputsInline: true,
       message0: Blockly.Msg.SENTRY_GET_QRCODEVALUE_MESSAGE0,
@@ -816,11 +727,7 @@ Blockly.Blocks["SentryDetectedColor"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           type: "field_dropdown",
           name: "ColorLabel",
@@ -852,11 +759,7 @@ Blockly.Blocks["SentryDetectedBlob"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           type: "field_dropdown",
           name: "ColorLabel",
@@ -889,11 +792,7 @@ Blockly.Blocks["SentryDetectedCard"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           name: "card",
           options: [
@@ -973,11 +872,7 @@ Blockly.Blocks["SentryDetected20Class"] = {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
       args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
+
         {
           name: "card",
           options: [
@@ -1021,13 +916,7 @@ Blockly.Blocks["SentryRows"] = {
   init: function () {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
+
       output: null,
       inputsInline: true,
       message0: Blockly.Msg.SENTRY_ROWS_MESSAGE0,
@@ -1039,13 +928,7 @@ Blockly.Blocks["SentryCols"] = {
   init: function () {
     this.jsonInit({
       colour: Sentry_RunMode_Color,
-      args0: [
-        {
-          name: "sentry",
-          options: sentry,
-          type: "field_dropdown",
-        },
-      ],
+
       output: null,
       inputsInline: true,
       message0: Blockly.Msg.SENTRY_COLS_MESSAGE0,
