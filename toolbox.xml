@@ -1,137 +1,274 @@
 <category id="morpxSentry" name="Sentry" colour="#EF5411">
-  <category id="morpxSentry_Setup" name="{$CATEGORY_MORPX_SENTRY_SETUP}" colour="#EF5411">    
-    <!-- 初始化 Sentry -->
-    <block type="SentryBegin"></block>    
-    <!-- 恢复默认设置 -->
-    <block type="SentrySetDefault"></block>    
-    <!-- 启用算法 -->
-    <block type="SentryVisionSetStatus">
-      <value name="VisionType">
-        <shadow type="SentryVisionType"></shadow>
-      </value>
-    </block>   
-    <block type="SeneorSetCoordinateType"></block>     
-    <!-- 设置 算法参数个数-->
-    <block type="SentrySetParamNum">
-      <value name="VisionType">
-        <shadow type="SentryVisionType"></shadow>
-      </value>
-      <value name="max_num">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>    
-    <!-- Color 算法参数-->
-    <block type="SentryColorParam">
-      <value name="x">
-        <shadow type="math_number">
-          <field name="NUM">120</field>
-        </shadow>
-      </value>
-      <value name="y">
-        <shadow type="math_number">
-          <field name="NUM">120</field>
-        </shadow>
-      </value>
-      <value name="w">
-        <shadow type="math_number">
-          <field name="NUM">20</field>
-        </shadow>
-      </value>
-      <value name="h">
-        <shadow type="math_number">
-          <field name="NUM">20</field>
-        </shadow>
-      </value>
-    </block>    
-    <!-- Blod 算法参数-->
-    <block type="SentryBlodParam">
-      <value name="w">
-        <shadow type="math_number">
-          <field name="NUM">15</field>
-        </shadow>
-      </value>
-      <value name="h">
-        <shadow type="math_number">
-          <field name="NUM">15</field>
-        </shadow>
-      </value>
-    </block>    
-    <!-- Face 算法参数-->
-    <!-- <block type="SentryFaceParam">
-      <value name="l">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>     -->
-    <!-- 设置 算法参数-->
-    <block type="SentrySetParam">
-      <value name="prama">
-        <shadow type="None"></shadow>
-      </value>
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>    
+  <category id="morpxSentry1" name="Sentry1" colour="#EF5411">
+    <category id="morpxSentry1_Setup" name="{$CATEGORY_MORPX_SENTRY_SETUP}" colour="#EF5411">
+      <!-- 初始化 Sentry1 -->
+      <block type="Sentry1Begin"></block>
+      <!-- 恢复默认设置 -->
+      <!-- <block type="Sentry1SetDefault"></block> -->
+      <!-- 启用算法 -->
+      <block type="Sentry1VisionSetStatus">
+        <value name="VisionType">
+          <shadow type="Sentry1VisionType"></shadow>
+        </value>
+      </block>
+      <!-- 设置 LED -->
+      <block type="Sentry1LedSetColor">
+        <value name="level">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- 设置 算法参数个数-->
+      <block type="Sentry1SetParamNum">
+        <value name="VisionType">
+          <shadow type="Sentry1VisionType"></shadow>
+        </value>
+        <value name="max_num">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- Color 算法参数-->
+      <block type="Sentry1SetColorParam">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">120</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">120</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- Blod 算法参数-->
+      <block type="Sentry1SetBlodParam">
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">15</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">15</field>
+          </shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- <block type="Sentry1CameraSetZoom"></block>
+      <block type="Sentry1UartSetBaudrate"></block>
+      <block type="Sentry1CameraSetAwb"></block>
+      <block type="Sentry1CameraSetFPS"></block> -->
+    </category>
+    <category id="morpxSentry1_Run" name="{$CATEGORY_MORPX_SENTRY_RUN}" colour="#EAA20A">
+      <block type="Sentry1Detected">
+        <value name="VisionType">
+          <shadow type="Sentry1VisionType"></shadow>
+        </value>
+      </block>
+      <block type="Sentry1GetValue">
+        <value name="VisionType">
+          <shadow type="Sentry1VisionType"></shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1ColorRcgValue">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1LineValue">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1DetectedColor">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1DetectedBlob">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1DetectedCard">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- <block type="Sentry1Rows"></block>
+      <block type="Sentry1Cols"></block> -->
+    </category>
   </category>
-  <category id="morpxSentry_Run" name="{$CATEGORY_MORPX_SENTRY_RUN}" colour="#EAA20A">
-    <block type="SentryDetected">
-      <value name="VisionType">
-        <shadow type="SentryVisionType"></shadow>
-      </value>
-    </block>
-    <block type="SentryGetValue">
-      <value name="VisionType">
-        <shadow type="SentryVisionType"></shadow>
-      </value>
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryColorRcgValue">
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryQrRcgValue"></block>
-    <block type="SentryGetQrCodeValue"></block>
-    <block type="SentryDetectedColor">
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryDetectedBlob">
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryDetectedCard">
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryDetected20Class">
-      <value name="objid">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryRows"></block>
-    <block type="SentryCols"></block>
+  <category id="morpxSentry2" name="Sentry2" colour="#EF5411">
+    <category id="morpxSentry2_Setup" name="{$CATEGORY_MORPX_SENTRY_SETUP}" colour="#EF5411">
+      <!-- 初始化 Sentry2 -->
+      <block type="Sentry2Begin"></block>
+      <!-- 恢复默认设置 -->
+      <!-- <block type="Sentry2SetDefault"></block> -->
+      <!-- 启用算法 -->
+      <block type="Sentry2VisionSetStatus">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+      </block>
+      <!-- <block type="SeneorSetCoordinateType"></block> -->
+      <!-- 设置 算法参数个数-->
+      <block type="Sentry2SetParamNum">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+        <value name="max_num">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- Color 算法参数-->
+      <block type="Sentry2SetColorParam">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">120</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">120</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- Blod 算法参数-->
+      <block type="Sentry2SetBlodParam">
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">15</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">15</field>
+          </shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </category>
+    <category id="morpxSentry2_Run" name="{$CATEGORY_MORPX_SENTRY_RUN}" colour="#EAA20A">
+      <block type="Sentry2Detected">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+      </block>
+      <block type="Sentry2GetValue">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2ColorRcgValue">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2QrRcgValue"></block>
+      <block type="Sentry2GetQrCodeValue"></block>
+      <block type="Sentry2LineValue">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2DetectedColor">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2DetectedBlob">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2DetectedCard">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2Detected20Class">
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- <block type="Sentry2Rows"></block>
+      <block type="Sentry2Cols"></block> -->
+    </category>
   </category>
 </category>

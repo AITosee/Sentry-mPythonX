@@ -8,26 +8,26 @@ Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '运行模块';
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化视觉传感器，并选择相关的地址';
 
 // 设置模块文本
-Blockly.Msg.SENTRY_BEGIN_MESSAGE0 = '初始化 Sentry2 %1 端口地址 %2';
-Blockly.Msg.SENTRY_SET_DEFAULT_MESSAGE0 = ' 恢复 Sentry2 默认参数';
-Blockly.Msg.SENTRY_SET_COORD_TYPE_MESSAGE0 = ' 设置 Sentry2 输出坐标模式 %1';
-Blockly.Msg.SENTRY_VISION_SET_STATUS_MESSAGE0 = 'Sentry2 %1 算法 %2';
-Blockly.Msg.SENTRY_SET_PARAMNUM_MESSAGE0 = '设置 Sentry2 算法 %1 参数个数 %2';
-Blockly.Msg.SENTRY_SET_PARAM_MESSAGE0 = '设置 Sentry2 算法参数 %1 索引 %2';
-Blockly.Msg.SENTRY_COLORPARAM_MESSAGE0 = '颜色识别 区域中心横坐标 %1 纵坐标 %2 宽度 %3 高度 %4';
-Blockly.Msg.SENTRY_BOLDPARAM_MESSAGE0 = '色块检测 最小宽度 %1 高度 %2 检测标签 %3';
-Blockly.Msg.SENTRY_FACEPARAM_MESSAGE0 = '人脸标签 %1';  
-Blockly.Msg.SENTRY_DETECTED_MESSAGE0 = 'Sentry2 算法 %1 检测结果数量';
-Blockly.Msg.SENTRY_GET_VALUE_MESSAGE0 = 'Sentry2 算法 %1 结果 %2 索引 %3';
-Blockly.Msg.SENTRY_COLORRCGVALUE_MESSAGE0 = 'Sentry2 颜色识别结果 %1 索引 %2';
-Blockly.Msg.SENTRY_QRRCGVALUE_MESSAGE0 = 'Sentry2 二维码识别结果 %1';
-Blockly.Msg.SENTRY_GET_QRCODEVALUE_MESSAGE0 = 'Sentry2 二维码识别结果字符串';
-Blockly.Msg.SENTRY_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 颜色识别算法检测到 %1 索引 %2';
-Blockly.Msg.SENTRY_DETECTEDBLOB_MESSAGE0 = 'Sentry2 色块检测算法检测到 %1 索引 %2';
-Blockly.Msg.SENTRY_DETECTEDCARD_MESSAGE0 = 'Sentry2 卡片识别算法检测到 %1 索引 %2';
-Blockly.Msg.SENTRY_DETECTED20CLASS_MESSAGE0 = 'Sentry 20分类识别算法检测到 %1 索引 %2';
-Blockly.Msg.SENTRY_ROWS_MESSAGE0 = 'Sentry2 图像宽度';
-Blockly.Msg.SENTRY_COLS_MESSAGE0 = 'Sentry2 图像高度';
+Blockly.Msg.SENTRY2_BEGIN_MESSAGE0 = '初始化 Sentry2 %1 端口地址 %2';
+Blockly.Msg.SENTRY2_SET_DEFAULT_MESSAGE0 = ' 恢复 Sentry2 默认参数';
+Blockly.Msg.SENTRY2_SET_COORD_TYPE_MESSAGE0 = ' 设置 Sentry2 输出坐标模式 %1';
+Blockly.Msg.SENTRY2_VISION_SET_STATUS_MESSAGE0 = 'Sentry2 %1 算法 %2';
+Blockly.Msg.SENTRY2_SET_PARAMNUM_MESSAGE0 = '设置 Sentry2 算法 %1 参数个数 %2';
+Blockly.Msg.SENTRY2_SET_PARAM_MESSAGE0 = '设置 Sentry2 算法参数 %1 索引 %2';
+Blockly.Msg.SENTRY2_COLORPARAM_MESSAGE0 = '颜色识别 区域中心横坐标 %1 纵坐标 %2 宽度 %3 高度 %4';
+Blockly.Msg.SENTRY2_BOLDPARAM_MESSAGE0 = '色块检测 最小宽度 %1 高度 %2 检测标签 %3';
+Blockly.Msg.SENTRY2_FACEPARAM_MESSAGE0 = '人脸标签 %1';  
+Blockly.Msg.SENTRY2_DETECTED_MESSAGE0 = 'Sentry2 算法 %1 检测结果数量';
+Blockly.Msg.SENTRY2_GET_VALUE_MESSAGE0 = 'Sentry2 算法 %1 结果 %2 索引 %3';
+Blockly.Msg.SENTRY2_COLORRCGVALUE_MESSAGE0 = 'Sentry2 颜色识别结果 %1 索引 %2';
+Blockly.Msg.SENTRY2_QRRCGVALUE_MESSAGE0 = 'Sentry2 二维码识别结果 %1';
+Blockly.Msg.SENTRY2_GET_QRCODEVALUE_MESSAGE0 = 'Sentry2 二维码识别结果字符串';
+Blockly.Msg.SENTRY2_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 颜色识别算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY2_DETECTEDBLOB_MESSAGE0 = 'Sentry2 色块检测算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY2_DETECTEDCARD_MESSAGE0 = 'Sentry2 卡片识别算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry 20分类识别算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY2_ROWS_MESSAGE0 = 'Sentry2 图像宽度';
+Blockly.Msg.SENTRY2_COLS_MESSAGE0 = 'Sentry2 图像高度';
 
 // Sentry Vision type
 Blockly.Msg.SENTRY_VISION_VISIONCOLOR = '颜色识别';
@@ -81,10 +81,10 @@ Blockly.Msg.SENTRY_ZOOM_4 = '等级4';
 Blockly.Msg.SENTRY_ZOOM_5 = '等级5';
 
 // Sentry White Balance Type
-Blockly.Msg.SENTRY_AUTO = '自动';
-Blockly.Msg.SENTRY_LOCK_AWB = '锁定白平衡';
-Blockly.Msg.SENTRY_WHITE_LIGHT = '白光模式';
-Blockly.Msg.SENTRY_YELLOW_LIGHT = '黄光模式';
+Blockly.Msg.SENTRY_AWB_AUTO = '自动';
+Blockly.Msg.SENTRY_AWB_LOCK = '锁定白平衡';
+Blockly.Msg.SENTRY_AWB_WHITE_LIGHT = '白光模式';
+Blockly.Msg.SENTRY_AWB_YELLOW_LIGHT = '黄光模式';
 
 // Sentry State Value Type
 Blockly.Msg.SENTRY_STATE_VALUE_X = '横向坐标';

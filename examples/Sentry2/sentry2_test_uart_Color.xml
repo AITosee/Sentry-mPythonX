@@ -17,24 +17,24 @@
       </shadow>
     </value>
     <next>
-      <block type="SentryBegin" id="zZ}`)ThE5810L5vIOHd`">
+      <block type="Sentry2Begin" id="zZ}`)ThE5810L5vIOHd`">
         <field name="InitType">uart1</field>
         <field name="sentry">0</field>
         <next>
-          <block type="SentrySetDefault" id="LHPMx#WD4P*VgHlc_nB|">
+          <block type="Sentry2SetDefault" id="LHPMx#WD4P*VgHlc_nB|">
             <next>
-              <block type="SentryVisionSetStatus" id="y9])Q9pqT!qP?OVB9qO1">
+              <block type="Sentry2VisionSetStatus" id="y9])Q9pqT!qP?OVB9qO1">
                 <field name="VisionStatus">Begin</field>
                 <value name="VisionType">
-                  <shadow type="SentryVisionType" id="o9XJnvm-8/O]h*l0l%=!">
-                    <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                  <shadow type="Sentry2VisionType" id="o9XJnvm-8/O]h*l0l%=!">
+                    <field name="VisionType">sentry2_vision_e.kVisionColor</field>
                   </shadow>
                 </value>
                 <next>
-                  <block type="SentrySetParamNum" id="~BS@7_h0=;y?R{h.tx;^">
+                  <block type="Sentry2SetParamNum" id="~BS@7_h0=;y?R{h.tx;^">
                     <value name="VisionType">
-                      <shadow type="SentryVisionType" id="0:.K*GD)3ACI?]`HPK(.">
-                        <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                      <shadow type="Sentry2VisionType" id="0:.K*GD)3ACI?]`HPK(.">
+                        <field name="VisionType">sentry2_vision_e.kVisionColor</field>
                       </shadow>
                     </value>
                     <value name="max_num">
@@ -43,9 +43,9 @@
                       </shadow>
                     </value>
                     <next>
-                      <block type="SentrySetParam" id="}nz%#_`8X@dsnPkRd]@%">
+                      <block type="Sentry2SetParam" id="}nz%#_`8X@dsnPkRd]@%">
                         <value name="prama">
-                          <block type="SentryColorParam" id="dbiV?1nn3K^Y^ryd(IdK">
+                          <block type="Sentry2ColorParam" id="dbiV?1nn3K^Y^ryd(IdK">
                             <value name="x">
                               <shadow type="math_number" id="oV@[iwbstu`gkZu1I_)(">
                                 <field name="NUM">10</field>
@@ -74,9 +74,9 @@
                           </shadow>
                         </value>
                         <next>
-                          <block type="SentrySetParam" id="vYYp6vth?g5=H[N/qfgS">
+                          <block type="Sentry2SetParam" id="vYYp6vth?g5=H[N/qfgS">
                             <value name="prama">
-                              <block type="SentryColorParam" id="(L=4[+r$@ghk7wA$?Z!z">
+                              <block type="Sentry2ColorParam" id="(L=4[+r$@ghk7wA$?Z!z">
                                 <value name="x">
                                   <shadow type="math_number" id="SXBoh[:ssk_n2p=M8]=i">
                                     <field name="NUM">20</field>
@@ -105,9 +105,9 @@
                               </shadow>
                             </value>
                             <next>
-                              <block type="SentrySetParam" id="K^{~8SuOTS#}6?PZh4os">
+                              <block type="Sentry2SetParam" id="K^{~8SuOTS#}6?PZh4os">
                                 <value name="prama">
-                                  <block type="SentryColorParam" id="z5tKG|Y|*X-qhxjUljyz">
+                                  <block type="Sentry2ColorParam" id="z5tKG|Y|*X-qhxjUljyz">
                                     <value name="x">
                                       <shadow type="math_number" id="m{U[6I:jYGX/s4]ye#!N">
                                         <field name="NUM">60</field>
@@ -136,9 +136,9 @@
                                   </shadow>
                                 </value>
                                 <next>
-                                  <block type="SentrySetParam" id="M/Qub]`{WHoVg=pwJ7#H">
+                                  <block type="Sentry2SetParam" id="M/Qub]`{WHoVg=pwJ7#H">
                                     <value name="prama">
-                                      <block type="SentryColorParam" id="6%EMSSbGonM3O1+hx$%{">
+                                      <block type="Sentry2ColorParam" id="6%EMSSbGonM3O1+hx$%{">
                                         <value name="x">
                                           <shadow type="math_number" id="hqou$`pU0cM(jJ^2E7u?">
                                             <field name="NUM">100</field>
@@ -175,10 +175,10 @@
                                               <shadow type="math_number" id="3g,Osc+Oz^}ZqIVM{BY.">
                                                 <field name="NUM">0</field>
                                               </shadow>
-                                              <block type="SentryDetected" id="l*3XcPD@ibjp6QG,h!1U">
+                                              <block type="Sentry2Detected" id="l*3XcPD@ibjp6QG,h!1U">
                                                 <value name="VisionType">
-                                                  <shadow type="SentryVisionType" id="]f,}S7bU4?K!u.jLpP1m">
-                                                    <field name="VisionType">sentry_vision_e.kVisionColor</field>
+                                                  <shadow type="Sentry2VisionType" id="]f,}S7bU4?K!u.jLpP1m">
+                                                    <field name="VisionType">sentry2_vision_e.kVisionColor</field>
                                                   </shadow>
                                                 </value>
                                               </block>
@@ -208,7 +208,7 @@
                                                   <block type="controls_if" id="fN9iJEZwc@DY,6K-UFR;">
                                                     <mutation else="1"></mutation>
                                                     <value name="IF0">
-                                                      <block type="SentryDetectedColor" id="F]FSbg~[Y_ouCg.a%+5n">
+                                                      <block type="Sentry2DetectedColor" id="F]FSbg~[Y_ouCg.a%+5n">
                                                         <field name="ColorLabel">color_label_e.kColorBlack</field>
                                                         <value name="objid">
                                                           <shadow type="math_number" id="1p7jT*kU0#i_.,F2LDVt">
@@ -241,7 +241,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD1">
-                                                                  <block type="SentryColorRcgValue" id="jOttmJQz3mke@e;#sX#x">
+                                                                  <block type="Sentry2ColorRcgValue" id="jOttmJQz3mke@e;#sX#x">
                                                                     <field name="objinfo">sentry_obj_info_e.kRValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -254,7 +254,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD2">
-                                                                  <block type="SentryColorRcgValue" id="*|5RI}g#8zUTD@P;@k`.">
+                                                                  <block type="Sentry2ColorRcgValue" id="*|5RI}g#8zUTD@P;@k`.">
                                                                     <field name="objinfo">sentry_obj_info_e.kGValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -267,7 +267,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD3">
-                                                                  <block type="SentryColorRcgValue" id="L%G8}^Yway`s=ZE-I49~">
+                                                                  <block type="Sentry2ColorRcgValue" id="L%G8}^Yway`s=ZE-I49~">
                                                                     <field name="objinfo">sentry_obj_info_e.kBValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -280,7 +280,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD4">
-                                                                  <block type="SentryColorRcgValue" id="p(RHC+V7mMXkjh=C+it;">
+                                                                  <block type="Sentry2ColorRcgValue" id="p(RHC+V7mMXkjh=C+it;">
                                                                     <field name="objinfo">sentry_obj_info_e.kLabel</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -319,7 +319,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD1">
-                                                                  <block type="SentryColorRcgValue" id="r13,Jr6?=N@4Qa*B/asg">
+                                                                  <block type="Sentry2ColorRcgValue" id="r13,Jr6?=N@4Qa*B/asg">
                                                                     <field name="objinfo">sentry_obj_info_e.kRValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -332,7 +332,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD2">
-                                                                  <block type="SentryColorRcgValue" id="id|Bx)Yq)SusTcS#YWU:">
+                                                                  <block type="Sentry2ColorRcgValue" id="id|Bx)Yq)SusTcS#YWU:">
                                                                     <field name="objinfo">sentry_obj_info_e.kGValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -345,7 +345,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD3">
-                                                                  <block type="SentryColorRcgValue" id=",n`p+HE`~BGeDg]i8soB">
+                                                                  <block type="Sentry2ColorRcgValue" id=",n`p+HE`~BGeDg]i8soB">
                                                                     <field name="objinfo">sentry_obj_info_e.kBValue</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">
@@ -358,7 +358,7 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD4">
-                                                                  <block type="SentryColorRcgValue" id="_2*osOtlAR8n,lh*W19y">
+                                                                  <block type="Sentry2ColorRcgValue" id="_2*osOtlAR8n,lh*W19y">
                                                                     <field name="objinfo">sentry_obj_info_e.kLabel</field>
                                                                     <value name="objid">
                                                                       <shadow type="math_number" id="=L`2.`E$q#nB+h6KEV{|">

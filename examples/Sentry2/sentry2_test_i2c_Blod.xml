@@ -1,22 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="SentryBegin" id="zZ}`)ThE5810L5vIOHd`" x="-420" y="-932">
+  <block type="Sentry2Begin" id="zZ}`)ThE5810L5vIOHd`" x="-420" y="-932">
     <field name="InitType">i2c</field>
     <field name="sentry">0</field>
     <next>
-      <block type="SentrySetDefault" id="LHPMx#WD4P*VgHlc_nB|">
+      <block type="Sentry2SetDefault" id="LHPMx#WD4P*VgHlc_nB|">
         <next>
-          <block type="SentryVisionSetStatus" id="y9])Q9pqT!qP?OVB9qO1">
+          <block type="Sentry2VisionSetStatus" id="y9])Q9pqT!qP?OVB9qO1">
             <field name="VisionStatus">Begin</field>
             <value name="VisionType">
-              <shadow type="SentryVisionType" id="o9XJnvm-8/O]h*l0l%=!">
-                <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+              <shadow type="Sentry2VisionType" id="o9XJnvm-8/O]h*l0l%=!">
+                <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
               </shadow>
             </value>
             <next>
-              <block type="SentrySetParamNum" id="ZOeQb)2cvYYo,B)PWuCg">
+              <block type="Sentry2SetParamNum" id="ZOeQb)2cvYYo,B)PWuCg">
                 <value name="VisionType">
-                  <shadow type="SentryVisionType" id="#^}=FX(r+o:uyWgk+!Z_">
-                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                  <shadow type="Sentry2VisionType" id="#^}=FX(r+o:uyWgk+!Z_">
+                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                   </shadow>
                 </value>
                 <value name="max_num">
@@ -25,9 +25,9 @@
                   </shadow>
                 </value>
                 <next>
-                  <block type="SentrySetParam" id="GVvUE%Ly)8%Gzs3ht]JC">
+                  <block type="Sentry2SetParam" id="GVvUE%Ly)8%Gzs3ht]JC">
                     <value name="prama">
-                      <block type="SentryBlodParam" id="(1PvB2O/Q=J4Aci8jCK]">
+                      <block type="Sentry2BlodParam" id="(1PvB2O/Q=J4Aci8jCK]">
                         <field name="lable">color_label_e.kColorRed</field>
                         <value name="w">
                           <shadow type="math_number" id="7l|STT(sDZ+leXbQf;oM">
@@ -47,9 +47,9 @@
                       </shadow>
                     </value>
                     <next>
-                      <block type="SentrySetParam" id="Gc,#`aV%Y{kU7g(!7z%s">
+                      <block type="Sentry2SetParam" id="Gc,#`aV%Y{kU7g(!7z%s">
                         <value name="prama">
-                          <block type="SentryBlodParam" id="U;F.Vu-Xhmo!^lM#@~C{">
+                          <block type="Sentry2BlodParam" id="U;F.Vu-Xhmo!^lM#@~C{">
                             <field name="lable">color_label_e.kColorGreen</field>
                             <value name="w">
                               <shadow type="math_number" id="w_tY$8*k_(=-0/#*mD]Q">
@@ -69,9 +69,9 @@
                           </shadow>
                         </value>
                         <next>
-                          <block type="SentrySetParam" id="b7L_Fy`aJAF)H+:g{xAL">
+                          <block type="Sentry2SetParam" id="b7L_Fy`aJAF)H+:g{xAL">
                             <value name="prama">
-                              <block type="SentryBlodParam" id=".T!S+|{fbbV^1-%$SIat">
+                              <block type="Sentry2BlodParam" id=".T!S+|{fbbV^1-%$SIat">
                                 <field name="lable">color_label_e.kColorBlue</field>
                                 <value name="w">
                                   <shadow type="math_number" id="j@529w;wds}dbY1994F?">
@@ -91,9 +91,9 @@
                               </shadow>
                             </value>
                             <next>
-                              <block type="SentrySetParam" id="V3;$;Z,E~p9L7s){QOC!">
+                              <block type="Sentry2SetParam" id="V3;$;Z,E~p9L7s){QOC!">
                                 <value name="prama">
-                                  <block type="SentryBlodParam" id="TWuie3Mqe[Bc,F+Yy?ex">
+                                  <block type="Sentry2BlodParam" id="TWuie3Mqe[Bc,F+Yy?ex">
                                     <field name="lable">color_label_e.kColorYellow</field>
                                     <value name="w">
                                       <shadow type="math_number" id="KD8/MfLgd-fua6_Cgz4s">
@@ -121,10 +121,10 @@
                                           <shadow type="math_number" id="[JZwZgCF_xoM-Of/lGU|">
                                             <field name="NUM">0</field>
                                           </shadow>
-                                          <block type="SentryDetected" id="l*3XcPD@ibjp6QG,h!1U">
+                                          <block type="Sentry2Detected" id="l*3XcPD@ibjp6QG,h!1U">
                                             <value name="VisionType">
-                                              <shadow type="SentryVisionType" id="]f,}S7bU4?K!u.jLpP1m">
-                                                <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                              <shadow type="Sentry2VisionType" id="]f,}S7bU4?K!u.jLpP1m">
+                                                <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                               </shadow>
                                             </value>
                                           </block>
@@ -154,7 +154,7 @@
                                               <block type="controls_if" id="fN9iJEZwc@DY,6K-UFR;">
                                                 <mutation else="1"></mutation>
                                                 <value name="IF0">
-                                                  <block type="SentryDetectedBlob" id="*43H1}ntiz.yo.^YU1TH">
+                                                  <block type="Sentry2DetectedBlob" id="*43H1}ntiz.yo.^YU1TH">
                                                     <field name="ColorLabel">color_label_e.kColorBlack</field>
                                                     <value name="objid">
                                                       <shadow type="math_number" id="B!5)s7nA!+-N}ve$5CQ[">
@@ -187,11 +187,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD1">
-                                                              <block type="SentryGetValue" id="|2lgCs^}/f6Xe`,p-Er6">
+                                                              <block type="Sentry2GetValue" id="|2lgCs^}/f6Xe`,p-Er6">
                                                                 <field name="objinfo">sentry_obj_info_e.kXValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="lf(aP?%bH8jHqMuMVH;8">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="lf(aP?%bH8jHqMuMVH;8">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -205,11 +205,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD2">
-                                                              <block type="SentryGetValue" id="o`wM4sWy*Xul@E$u!LW-">
+                                                              <block type="Sentry2GetValue" id="o`wM4sWy*Xul@E$u!LW-">
                                                                 <field name="objinfo">sentry_obj_info_e.kYValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="THwtd%rGm-04^wkCq}FU">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="THwtd%rGm-04^wkCq}FU">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -223,11 +223,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD3">
-                                                              <block type="SentryGetValue" id=")Cc~8!d37p2781h|qFbV">
+                                                              <block type="Sentry2GetValue" id=")Cc~8!d37p2781h|qFbV">
                                                                 <field name="objinfo">sentry_obj_info_e.kWidthValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="Gh0+X6BRPZ*rK}3/9y-I">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="Gh0+X6BRPZ*rK}3/9y-I">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -241,11 +241,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD4">
-                                                              <block type="SentryGetValue" id="Sq*^x_irD)wl|`vk,X1$">
+                                                              <block type="Sentry2GetValue" id="Sq*^x_irD)wl|`vk,X1$">
                                                                 <field name="objinfo">sentry_obj_info_e.kHeightValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="Y+)nLaatSFvAUb,-9ItT">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="Y+)nLaatSFvAUb,-9ItT">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -259,11 +259,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD5">
-                                                              <block type="SentryGetValue" id="Zamy]c~{we~N$3h-RzYM">
+                                                              <block type="Sentry2GetValue" id="Zamy]c~{we~N$3h-RzYM">
                                                                 <field name="objinfo">sentry_obj_info_e.kLabel</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="-MB#v_#os0@G8=HO72f:">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="-MB#v_#os0@G8=HO72f:">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -303,11 +303,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD1">
-                                                              <block type="SentryGetValue" id="eY}~#AT--vvNKATbcVhZ">
+                                                              <block type="Sentry2GetValue" id="eY}~#AT--vvNKATbcVhZ">
                                                                 <field name="objinfo">sentry_obj_info_e.kXValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="l}k9y4F9.ac,;4==p`Vq">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="l}k9y4F9.ac,;4==p`Vq">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -321,11 +321,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD2">
-                                                              <block type="SentryGetValue" id="9Fa}V`R+]eISiSD8YNkE">
+                                                              <block type="Sentry2GetValue" id="9Fa}V`R+]eISiSD8YNkE">
                                                                 <field name="objinfo">sentry_obj_info_e.kYValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="1bo*cV?lWTaG{?itf}z)">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="1bo*cV?lWTaG{?itf}z)">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -339,11 +339,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD3">
-                                                              <block type="SentryGetValue" id="lJ9CwHJ_?Rj:8k^}*cUH">
+                                                              <block type="Sentry2GetValue" id="lJ9CwHJ_?Rj:8k^}*cUH">
                                                                 <field name="objinfo">sentry_obj_info_e.kWidthValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="L34k,@~@C-])EW{?{0RS">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="L34k,@~@C-])EW{?{0RS">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -357,11 +357,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD4">
-                                                              <block type="SentryGetValue" id="(JpUVNGKvkP9J+RL{8e.">
+                                                              <block type="Sentry2GetValue" id="(JpUVNGKvkP9J+RL{8e.">
                                                                 <field name="objinfo">sentry_obj_info_e.kHeightValue</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="4@3/ia$AHL(_tYO#W|lA">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="4@3/ia$AHL(_tYO#W|lA">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">
@@ -375,11 +375,11 @@
                                                               </block>
                                                             </value>
                                                             <value name="ADD5">
-                                                              <block type="SentryGetValue" id="p+p#aKGl37VY$h/Z,u5*">
+                                                              <block type="Sentry2GetValue" id="p+p#aKGl37VY$h/Z,u5*">
                                                                 <field name="objinfo">sentry_obj_info_e.kLabel</field>
                                                                 <value name="VisionType">
-                                                                  <shadow type="SentryVisionType" id="H({OFO#:N`mx@eR)sQ/^">
-                                                                    <field name="VisionType">sentry_vision_e.kVisionBlob</field>
+                                                                  <shadow type="Sentry2VisionType" id="H({OFO#:N`mx@eR)sQ/^">
+                                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="objid">

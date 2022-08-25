@@ -17,19 +17,19 @@
       </shadow>
     </value>
     <next>
-      <block type="SentryBegin" id="H`:kXv~?w7/zfb2nacm:">
+      <block type="Sentry2Begin" id="H`:kXv~?w7/zfb2nacm:">
         <field name="sentry">0</field>
         <field name="InitType">uart1</field>
         <next>
-          <block type="SentrySetDefault" id="5vl+{lf@,hQS!!aSDr)*">
+          <block type="Sentry2SetDefault" id="5vl+{lf@,hQS!!aSDr)*">
             <field name="sentry">0</field>
             <next>
-              <block type="SentryVisionSetStatus" id="8#qCbz#~^.af#+oW7c%k">
+              <block type="Sentry2VisionSetStatus" id="8#qCbz#~^.af#+oW7c%k">
                 <field name="sentry">0</field>
                 <field name="VisionStatus">Begin</field>
                 <value name="VisionType">
-                  <shadow type="SentryVisionType" id="hvWNUON02r3OViYXhEuB">
-                    <field name="VisionType">sentry_vision_e.kVisionQrCode</field>
+                  <shadow type="Sentry2VisionType" id="hvWNUON02r3OViYXhEuB">
+                    <field name="VisionType">sentry2_vision_e.kVisionQrCode</field>
                   </shadow>
                 </value>
                 <next>
@@ -37,11 +37,11 @@
                     <statement name="DO">
                       <block type="controls_if" id=")lLc!kJUsCtfcr|ze68x">
                         <value name="IF0">
-                          <block type="SentryDetected" id="^8*YARq^e4@+(9I-A,W_">
+                          <block type="Sentry2Detected" id="^8*YARq^e4@+(9I-A,W_">
                             <field name="sentry">0</field>
                             <value name="VisionType">
-                              <shadow type="SentryVisionType" id="KYAdW#beH@Iwxq,mbK*=">
-                                <field name="VisionType">sentry_vision_e.kVisionQrCode</field>
+                              <shadow type="Sentry2VisionType" id="KYAdW#beH@Iwxq,mbK*=">
+                                <field name="VisionType">sentry2_vision_e.kVisionQrCode</field>
                               </shadow>
                             </value>
                           </block>
@@ -62,31 +62,31 @@
                                   <block type="tuple_create_with_items_insert" id="tQp40txM|Y;20Mxj6R[v">
                                     <mutation items="5"></mutation>
                                     <value name="ADD0">
-                                      <block type="SentryQrRcgValue" id=")e/T|+{z=#nx-{8@q?bv">
+                                      <block type="Sentry2QrRcgValue" id=")e/T|+{z=#nx-{8@q?bv">
                                         <field name="sentry">0</field>
                                         <field name="objinfo">sentry_obj_info_e.kXValue</field>
                                       </block>
                                     </value>
                                     <value name="ADD1">
-                                      <block type="SentryQrRcgValue" id=":h6;-mWl+WJ_~?8XTYT_">
+                                      <block type="Sentry2QrRcgValue" id=":h6;-mWl+WJ_~?8XTYT_">
                                         <field name="sentry">0</field>
                                         <field name="objinfo">sentry_obj_info_e.kYValue</field>
                                       </block>
                                     </value>
                                     <value name="ADD2">
-                                      <block type="SentryQrRcgValue" id="0G+H_6P@g7zh4RT#TwJT">
+                                      <block type="Sentry2QrRcgValue" id="0G+H_6P@g7zh4RT#TwJT">
                                         <field name="sentry">0</field>
                                         <field name="objinfo">sentry_obj_info_e.kWidthValue</field>
                                       </block>
                                     </value>
                                     <value name="ADD3">
-                                      <block type="SentryQrRcgValue" id="nUV^:zBmGJxN(E;znP(z">
+                                      <block type="Sentry2QrRcgValue" id="nUV^:zBmGJxN(E;znP(z">
                                         <field name="sentry">0</field>
                                         <field name="objinfo">sentry_obj_info_e.kHeightValue</field>
                                       </block>
                                     </value>
                                     <value name="ADD4">
-                                      <block type="SentryGetQrCodeValue" id="V_J399^Mu6?{UHI5*eAh">
+                                      <block type="Sentry2GetQrCodeValue" id="V_J399^Mu6?{UHI5*eAh">
                                         <field name="sentry">0</field>
                                       </block>
                                     </value>
