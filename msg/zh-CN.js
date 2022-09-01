@@ -172,6 +172,8 @@ Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
 
 
+Blockly.Msg.SENTRY_BALLTABLETENNIS = '乒乓球';
+Blockly.Msg.SENTRY_BALLTENNIS = '网球';
 
 // Sentry1模块文本
 Blockly.Msg.SENTRY1_BEGIN_MESSAGE0 = '初始化 Sentry1 端口 %1 地址 %2';
@@ -198,6 +200,7 @@ Blockly.Msg.SENTRY1_DETECTEDCOLOR_MESSAGE0 = 'Sentry1 颜色识别算法检测�
 Blockly.Msg.SENTRY1_DETECTEDBLOB_MESSAGE0 = 'Sentry1 色块检测算法检测到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCARD_MESSAGE0 = 'Sentry1 卡片识别算法检测到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTED20CLASS_MESSAGE0 = 'Sentry1 20分类识别算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 球体检测别算法检测到 %1 索引 %2';
 Blockly.Msg.SENTRY1_ROWS_MESSAGE0 = 'Sentry1 图像宽度';
 Blockly.Msg.SENTRY1_COLS_MESSAGE0 = 'Sentry1 图像高度';
 

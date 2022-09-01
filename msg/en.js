@@ -165,7 +165,8 @@ Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
 
 
-
+Blockly.Msg.SENTRY_BALLTABLETENNIS = 'Table tennis';
+Blockly.Msg.SENTRY_BALLTENNIS = 'Tennis';
 
 // Sentry2模块文本
 Blockly.Msg.SENTRY2_BEGIN_MESSAGE0 = 'initialize Sentry2 %1 mode %2';

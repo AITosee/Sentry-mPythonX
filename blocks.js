@@ -692,6 +692,32 @@ Blockly.Blocks["Sentry1DetectedCard"] = {
   },
 };
 
+Blockly.Blocks["Sentry1DetectedBall"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_RunMode_Color,
+      args0: [
+        {
+          name: "card",
+          options: [
+            [Blockly.Msg.SENTRY_BALLTABLETENNIS, "sentry1_ball_label_e.kBallTableTennis"],
+            [Blockly.Msg.SENTRY_BALLTENNIS, "sentry1_ball_label_e.kBallTennis"],
+          ],
+          type: "field_dropdown",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "objid",
+        },
+      ],
+      output: null,
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0,
+    });
+  },
+};
+
 Blockly.Blocks["Sentry1Rows"] = {
   init: function () {
     this.jsonInit({

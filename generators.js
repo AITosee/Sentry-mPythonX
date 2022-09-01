@@ -204,7 +204,7 @@ Blockly.Python['Sentry1DetectedColor'] = function (block) {
   var ColorLabel = block.getFieldValue('ColorLabel');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionColor, sentry_obj_info_e.kLabel) == ' + ColorLabel  + ', ' + objid + ')'
+  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionColor, sentry_obj_info_e.kLabel' + ', ' + objid+') == ' + ColorLabel + ')'
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -216,7 +216,7 @@ Blockly.Python['Sentry1DetectedBlob'] = function (block) {
   var ColorLabel = block.getFieldValue('ColorLabel');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionBlob, sentry_obj_info_e.kLabel) == ' + ColorLabel  + ', ' + objid + ')'
+  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionBlob, sentry_obj_info_e.kLabel' + ', ' + objid +') == ' + ColorLabel  + ')'
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 
@@ -228,7 +228,19 @@ Blockly.Python['Sentry1DetectedCard'] = function (block) {
   var card = block.getFieldValue('card');
   var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
 
-  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionCard, sentry_obj_info_e.kLabel) == ' + card  + ', ' + objid + ')'
+  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionCard, sentry_obj_info_e.kLabel' + ', ' + objid +') == ' + card + ')'
+
+  Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
+
+  return [code, Blockly.Python.ORDER_ATOMIC];
+};
+
+Blockly.Python['Sentry1DetectedBall'] = function (block) {
+
+  var card = block.getFieldValue('card');
+  var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_NONE) || '0';
+
+  var code = '(sentry1' + '.GetValue(sentry1_vision_e.kVisionBall, sentry_obj_info_e.kLabel' + ', ' + objid +') == ' + card + ')'
 
   Blockly.Python.definitions_['import_Sentry'] = 'from Sentry import *';
 

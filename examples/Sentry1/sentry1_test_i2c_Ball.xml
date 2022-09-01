@@ -1,0 +1,196 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="Sentry1Begin" id="fza;Gsm/5l1#gSlXndWQ" x="-223" y="-640">
+    <field name="InitType">i2c</field>
+    <field name="sentry">0</field>
+    <next>
+      <block type="Sentry1VisionSetStatus" id="bQM^Y.bHCK/L0RDX,|}H">
+        <field name="VisionStatus">Begin</field>
+        <value name="VisionType">
+          <shadow type="Sentry1VisionType" id="m%FO`c[ZfYNivtB0:FpD">
+            <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="Sentry1LedSetColor" id="%{pSVc?IpfAmN2kVTn}=">
+            <field name="detected_color">sentry_led_color_e.kLedWhite</field>
+            <field name="undetected_color">sentry_led_color_e.kLedClose</field>
+            <value name="level">
+              <shadow type="math_number" id="9PHV,DLZ~*Lw[G0m7=.Z">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="controls_repeat_forever" id="mh+!5Nd-/UHW)dsKjhL]">
+                <statement name="DO">
+                  <block type="variables_set" id="w5:;gLaI[qi,+mTOkGf;">
+                    <field name="VAR">count</field>
+                    <value name="VALUE">
+                      <shadow type="math_number" id="vQz]VDuZ|_XEu%~=:Z6$">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="Sentry1Detected" id="L4xIkrPZ}!^oow~/w3wl">
+                        <value name="VisionType">
+                          <shadow type="Sentry1VisionType" id="JYuM`zGK9w.A4l{d+UXv">
+                            <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="4Frbb9S}o#vIv]Ho(POB">
+                        <field name="VAR">i</field>
+                        <value name="VALUE">
+                          <shadow type="math_number" id="1SGWbz^M@d*Tk}l/S9y9">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="controls_repeat_ext" id=";8`b5yS2`a(It[A@{:vP">
+                            <value name="TIMES">
+                              <shadow type="math_number" id="#$Ciz=O?aK`[o{r}D+`f">
+                                <field name="NUM">10</field>
+                              </shadow>
+                              <block type="variables_get" id="HYCO}qx51{HWB`UCK;-[">
+                                <field name="VAR">count</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="text_print" id="+Gd`r:3T*UT:|}ZJO2P+">
+                                <value name="TEXT">
+                                  <shadow type="text" id="TL?Ipwf_ae!W8hc5MA7M">
+                                    <field name="TEXT"></field>
+                                  </shadow>
+                                  <block type="text_format2" id="~Yv$r9m(xX4c$v@*^dv5">
+                                    <value name="FORMAT">
+                                      <shadow type="text" id="C2-Y4HcVuxze7B7n:mT|">
+                                        <field name="TEXT">{} {} {} {} {} {}</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="CONTENT">
+                                      <block type="tuple_create_with_items_insert" id="e#_P`HpI7++S:tNP2uD6">
+                                        <mutation items="6"></mutation>
+                                        <value name="ADD0">
+                                          <block type="variables_get" id="fb{hZDW_eED*6-Md5e1|">
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="Sentry1GetValue" id="rU^jmP!52$Pt0(6hpG9x">
+                                            <field name="objinfo">sentry_obj_info_e.kXValue</field>
+                                            <value name="VisionType">
+                                              <shadow type="Sentry1VisionType" id="Q,f3W2-{yU*Z*mYl0~$Q">
+                                                <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="objid">
+                                              <shadow type="math_number" id="(7cZk#Grz?y8B7;3:q6[">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id="DazdL_*Xi{c,[jZ-GHw{">
+                                                <field name="VAR">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="Sentry1GetValue" id="zblQ6_BC2UbVU$#/Dcly">
+                                            <field name="objinfo">sentry_obj_info_e.kYValue</field>
+                                            <value name="VisionType">
+                                              <shadow type="Sentry1VisionType" id="Q-*~Y|gYfcHTvSP(uD~m">
+                                                <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="objid">
+                                              <shadow type="math_number" id="(7cZk#Grz?y8B7;3:q6[">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id="uH55i|dy=BZbml@WbjMs">
+                                                <field name="VAR">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="Sentry1GetValue" id="PYe0DG_YQNdGzi$uJ`4=">
+                                            <field name="objinfo">sentry_obj_info_e.kWidthValue</field>
+                                            <value name="VisionType">
+                                              <shadow type="Sentry1VisionType" id="ce(ZT9+.7@01NgPBL5G`">
+                                                <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="objid">
+                                              <shadow type="math_number" id="(7cZk#Grz?y8B7;3:q6[">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id="MZiCx}$0oIkp=F,S.p|%">
+                                                <field name="VAR">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ADD4">
+                                          <block type="Sentry1GetValue" id="X%+B14W|sYUeDd.745fi">
+                                            <field name="objinfo">sentry_obj_info_e.kHeightValue</field>
+                                            <value name="VisionType">
+                                              <shadow type="Sentry1VisionType" id="gHG4opA[$X;Dpwq?Sz^8">
+                                                <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="objid">
+                                              <shadow type="math_number" id="(7cZk#Grz?y8B7;3:q6[">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id=")pE0UtW[)!?Gj%vxym12">
+                                                <field name="VAR">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ADD5">
+                                          <block type="Sentry1GetValue" id="~f!PSH?gi|%F[7JOYKt~">
+                                            <field name="objinfo">sentry_obj_info_e.kLabel</field>
+                                            <value name="VisionType">
+                                              <shadow type="Sentry1VisionType" id="[)i3^LfqS^l:N^(uKRdT">
+                                                <field name="VisionType">sentry1_vision_e.kVisionBall</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="objid">
+                                              <shadow type="math_number" id="(7cZk#Grz?y8B7;3:q6[">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id="r(DFH!y^Cu0G!LTGjoJ]">
+                                                <field name="VAR">i</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="math_change" id="wrpo2{G30:Uf|91pJa+M">
+                                    <field name="VAR">i</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="#mh*3,gfXet:Y_Ezu*U5">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

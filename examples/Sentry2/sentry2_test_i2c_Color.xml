@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="Sentry2Begin" id="lxEs7F73U(XP0r!MQ7i;" x="-221" y="-724">
+  <block type="Sentry2Begin" id="lxEs7F73U(XP0r!MQ7i;" x="-251" y="-793">
     <field name="InitType">i2c</field>
     <field name="sentry">1</field>
     <next>
@@ -7,14 +7,14 @@
         <field name="VisionStatus">Begin</field>
         <value name="VisionType">
           <shadow type="Sentry2VisionType" id="q$n,o/uDt;?GXy}e[LAQ">
-            <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
+            <field name="VisionType">sentry2_vision_e.kVisionColor</field>
           </shadow>
         </value>
         <next>
           <block type="Sentry2SetParamNum" id="BRZH}a{QF#99@7;RI)=~">
             <value name="VisionType">
               <shadow type="Sentry2VisionType" id="IlO[]dBIvk#L@J[v8lHt">
-                <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
+                <field name="VisionType">sentry2_vision_e.kVisionColor</field>
               </shadow>
             </value>
             <value name="max_num">
@@ -23,21 +23,30 @@
               </shadow>
             </value>
             <next>
-              <block type="Sentry2SetBlodParam" id="Rc6h,lu)XbxYA!2;vcu~">
-                <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                <field name="lable">color_label_e.kColorGreen</field>
+              <block type="Sentry2SetColorParam" id="J9`!Oe}h=.1Em!n9s$([">
+                <field name="VisionType">sentry2_vision_e.kVisionColor</field>
+                <value name="x">
+                  <shadow type="math_number" id="q?or8m|N9eZ_v^6Hti=W">
+                    <field name="NUM">120</field>
+                  </shadow>
+                </value>
+                <value name="y">
+                  <shadow type="math_number" id="4SV8Xr[pIPj^!ukp}V@W">
+                    <field name="NUM">120</field>
+                  </shadow>
+                </value>
                 <value name="w">
-                  <shadow type="math_number" id="2BZbJpoNF-GP;A#[yD7F">
-                    <field name="NUM">15</field>
+                  <shadow type="math_number" id="nj#/yeytj,]K1hqep+4_">
+                    <field name="NUM">40</field>
                   </shadow>
                 </value>
                 <value name="h">
-                  <shadow type="math_number" id="kw,soL0x!aC.JN1pNQj:">
-                    <field name="NUM">15</field>
+                  <shadow type="math_number" id="$}d8n=~`)MQIyc|WaD;k">
+                    <field name="NUM">40</field>
                   </shadow>
                 </value>
                 <value name="objid">
-                  <shadow type="math_number" id="LVsSV!1j!p6e^x58/6L;">
+                  <shadow type="math_number" id="/ZO(sl,|MuD*z;f?dI#b">
                     <field name="NUM">1</field>
                   </shadow>
                 </value>
@@ -53,7 +62,7 @@
                           <block type="Sentry2Detected" id="d~ZmpkhF.$0rBCBmwT_t">
                             <value name="VisionType">
                               <shadow type="Sentry2VisionType" id="xyeJ(KQS!s_^PZuHc#!V">
-                                <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
+                                <field name="VisionType">sentry2_vision_e.kVisionColor</field>
                               </shadow>
                             </value>
                           </block>
@@ -85,104 +94,54 @@
                                       <block type="text_format2" id="~Yv$r9m(xX4c$v@*^dv5">
                                         <value name="FORMAT">
                                           <shadow type="text" id="C2-Y4HcVuxze7B7n:mT|">
-                                            <field name="TEXT">{} {} {} {} {} {}</field>
+                                            <field name="TEXT">{} {} {} {} {}</field>
                                           </shadow>
                                         </value>
                                         <value name="CONTENT">
                                           <block type="tuple_create_with_items_insert" id="e#_P`HpI7++S:tNP2uD6">
-                                            <mutation items="6"></mutation>
+                                            <mutation items="5"></mutation>
                                             <value name="ADD0">
                                               <block type="variables_get" id="fb{hZDW_eED*6-Md5e1|">
                                                 <field name="VAR">i</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
-                                              <block type="Sentry2GetValue" id="HFVFVcx,WGdb^,Q)]:{f">
-                                                <field name="objinfo">sentry_obj_info_e.kXValue</field>
-                                                <value name="VisionType">
-                                                  <shadow type="Sentry2VisionType" id="xHlnC*/j7be:yWm7K24v">
-                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                                                  </shadow>
-                                                </value>
+                                              <block type="Sentry2ColorRcgValue" id="kabd8G/AK-waAO4%d]2D">
+                                                <field name="objinfo">sentry_obj_info_e.kRValue</field>
                                                 <value name="objid">
-                                                  <shadow type="math_number" id="bMZ#t+Bk-1gxUmtDxIKX">
+                                                  <shadow type="math_number" id="^AJCS=(x,dW)7TnY9y6Y">
                                                     <field name="NUM">1</field>
                                                   </shadow>
-                                                  <block type="variables_get" id="/I78!!SdxH%tiFu4U}Kc">
-                                                    <field name="VAR">i</field>
-                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="ADD2">
-                                              <block type="Sentry2GetValue" id="DPrxt$CH=v9yq5S-^wlN">
-                                                <field name="objinfo">sentry_obj_info_e.kYValue</field>
-                                                <value name="VisionType">
-                                                  <shadow type="Sentry2VisionType" id="]|YZd:*]cQRZI_GIsL5_">
-                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                                                  </shadow>
-                                                </value>
+                                              <block type="Sentry2ColorRcgValue" id="xWdpsG@[DN0rAuShD]Q0">
+                                                <field name="objinfo">sentry_obj_info_e.kGValue</field>
                                                 <value name="objid">
-                                                  <shadow type="math_number" id="bMZ#t+Bk-1gxUmtDxIKX">
+                                                  <shadow type="math_number" id="8waMtJcGsIzpjf5hF2DH">
                                                     <field name="NUM">1</field>
                                                   </shadow>
-                                                  <block type="variables_get" id="YX+$W3T=3MPTxNX?+CeP">
-                                                    <field name="VAR">i</field>
-                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="ADD3">
-                                              <block type="Sentry2GetValue" id="AX42G!5d~TjMxBvib0=y">
-                                                <field name="objinfo">sentry_obj_info_e.kWidthValue</field>
-                                                <value name="VisionType">
-                                                  <shadow type="Sentry2VisionType" id="_=hDW7-H]YUN{aWesR4K">
-                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                                                  </shadow>
-                                                </value>
+                                              <block type="Sentry2ColorRcgValue" id="iJ2Xv5jrH#73!{DPTx8U">
+                                                <field name="objinfo">sentry_obj_info_e.kBValue</field>
                                                 <value name="objid">
-                                                  <shadow type="math_number" id="bMZ#t+Bk-1gxUmtDxIKX">
+                                                  <shadow type="math_number" id="L.mI*1nln|~X7Rm5ypxe">
                                                     <field name="NUM">1</field>
                                                   </shadow>
-                                                  <block type="variables_get" id="m#RW/hDkzbG?L^l!J(.x">
-                                                    <field name="VAR">i</field>
-                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="ADD4">
-                                              <block type="Sentry2GetValue" id="%T#ALi*U@2SyL,vo#yfY">
-                                                <field name="objinfo">sentry_obj_info_e.kHeightValue</field>
-                                                <value name="VisionType">
-                                                  <shadow type="Sentry2VisionType" id="luCnc8o8O78?fnR)o:Ap">
-                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="objid">
-                                                  <shadow type="math_number" id="bMZ#t+Bk-1gxUmtDxIKX">
-                                                    <field name="NUM">1</field>
-                                                  </shadow>
-                                                  <block type="variables_get" id="O-x@oGnJ7QlKSkL$*+66">
-                                                    <field name="VAR">i</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="ADD5">
-                                              <block type="Sentry2GetValue" id="Zpd1K78^%jwf%1mh.+*)">
+                                              <block type="Sentry2ColorRcgValue" id="!1{p(0K26xlq:CnJG!-*">
                                                 <field name="objinfo">sentry_obj_info_e.kLabel</field>
-                                                <value name="VisionType">
-                                                  <shadow type="Sentry2VisionType" id="z$#WpL9zVz;`An^bXDpH">
-                                                    <field name="VisionType">sentry2_vision_e.kVisionBlob</field>
-                                                  </shadow>
-                                                </value>
                                                 <value name="objid">
-                                                  <shadow type="math_number" id="bMZ#t+Bk-1gxUmtDxIKX">
+                                                  <shadow type="math_number" id="|`K]Ke2;Ii?cP3E%*QJf">
                                                     <field name="NUM">1</field>
                                                   </shadow>
-                                                  <block type="variables_get" id="w{Vk{1FkF!m6#Y`w2uKO">
-                                                    <field name="VAR">i</field>
-                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
