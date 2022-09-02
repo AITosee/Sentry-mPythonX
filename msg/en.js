@@ -7,20 +7,6 @@ Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = 'Running';
 // Help文本
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = 'Initialize the vision sensor and select the relevant address';
 
-
-// Sentry Vision type
-Blockly.Msg.SENTRY_VISION_VISIONCOLOR = 'Color';
-Blockly.Msg.SENTRY_VISION_VISIONBLOB = 'Blob';
-Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
-Blockly.Msg.SENTRY_VISION_VISIONLINE = 'Line';
-Blockly.Msg.SENTRY_VISION_VISIONLEARNING = 'Learning';
-Blockly.Msg.SENTRY_VISION_VISIONCARD = 'Card';
-Blockly.Msg.SENTRY_VISION_VISIONFACE = 'Face';
-Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20Classes';
-Blockly.Msg.SENTRY_VISION_VISIONQRCODE = 'QrCode';
-Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = 'ObjTrack';
-Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = 'MotionDetect';
-
 Blockly.Msg.SENTRY_ABSOLUTE_COORDINATE = 'AbsoluteCoordinate'
 Blockly.Msg.SENTRY_PERCENT_AGECOORDINATE = 'PercentageCoordinate'
 
@@ -76,6 +62,12 @@ Blockly.Msg.SENTRY_STATE_VALUE_R = 'red channel';
 Blockly.Msg.SENTRY_STATE_VALUE_G = 'green channel';
 Blockly.Msg.SENTRY_STATE_VALUE_B = 'blue channel';
 
+Blockly.Msg.SENTRY_STATE_LINE_EX = 'X coordinate of end point';
+Blockly.Msg.SENTRY_STATE_LINE_EY = 'Y coordinate of end point';
+Blockly.Msg.SENTRY_STATE_LINE_SX = 'X coordinate of starting point';
+Blockly.Msg.SENTRY_STATE_LINE_SY = 'Y coordinate of starting point';
+Blockly.Msg.SENTRY_STATE_LINE_A = 'inclination angle';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = 'Black';
 Blockly.Msg.SENTRY_COLOR_WHITE = 'White';
@@ -84,6 +76,21 @@ Blockly.Msg.SENTRY_COLOR_GREEN = 'Green';
 Blockly.Msg.SENTRY_COLOR_BLUE = 'Blue';
 Blockly.Msg.SENTRY_COLOR_YELLOW = 'Yellow';
 Blockly.Msg.SENTRY_COLOR_UNKNOWN = 'Unkown';
+
+// Sentry Vision type
+Blockly.Msg.SENTRY_VISION_VISIONCOLOR = 'Color';
+Blockly.Msg.SENTRY_VISION_VISIONBLOB = 'Blob';
+Blockly.Msg.SENTRY_VISION_VISIONBALL = 'Ball';
+Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
+Blockly.Msg.SENTRY_VISION_VISIONLINE = 'Line';
+Blockly.Msg.SENTRY_VISION_VISIONLEARNING = 'Learning';
+Blockly.Msg.SENTRY_VISION_VISIONCARD = 'Card';
+Blockly.Msg.SENTRY_VISION_VISIONBODY = 'Body';
+Blockly.Msg.SENTRY_VISION_VISIONFACE = 'Face';
+Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20Classes';
+Blockly.Msg.SENTRY_VISION_VISIONQRCODE = 'QrCode';
+Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = 'ObjTrack';
+Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = 'MotionDetect';
 
 // Sentry 20 Class Type
 Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ Airplane';
@@ -164,9 +171,28 @@ Blockly.Msg.SENTRY_CARD_X = 'X';
 Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
 
-
 Blockly.Msg.SENTRY_BALLTABLETENNIS = 'Table tennis';
 Blockly.Msg.SENTRY_BALLTENNIS = 'Tennis';
+
+// Sentry1模块文本
+Blockly.Msg.SENTRY1_BEGIN_MESSAGE0 = 'initialize Sentry1 %1 mode %2';
+Blockly.Msg.SENTRY1_SET_DEFAULT_MESSAGE0 = 'restore Sentry1 defaultsettings';
+Blockly.Msg.SENTRY1_LED_SET_COLOR_MESSAGE0 = 'set Sentry1 LED detected %2 not detected %3 brightness(0~15) %1';
+Blockly.Msg.SENTRY1_SET_COORD_TYPE_MESSAGE0 = 'set Sentry1 coordinate type %1';
+Blockly.Msg.SENTRY1_VISION_SET_STATUS_MESSAGE0 = 'Sentry1 %1 algorithm %2';
+Blockly.Msg.SENTRY1_SET_PARAMNUM_MESSAGE0 = 'set Sentry1 algorithm %1 param max num %2';
+Blockly.Msg.SENTRY1_SET_PARAM_MESSAGE0 = 'set Sentry1 algorithm param %1 index %2';
+Blockly.Msg.SENTRY1_COLORPARAM_MESSAGE0 = 'Color ROI centre x%1 y %2 weight %3 height %4';
+Blockly.Msg.SENTRY1_BOLDPARAM_MESSAGE0 = 'Bold min weight %1 height %2 lable %3';
+Blockly.Msg.SENTRY1_DETECTED_MESSAGE0 = 'Sentry1 algorithm %1 detected number';
+Blockly.Msg.SENTRY1_GET_VALUE_MESSAGE0 = 'Sentry1 algorithm %1 Recognition %2 index %3';
+Blockly.Msg.SENTRY1_LINEVALUE_MESSAGE0 = 'Sentry1 algorithm Line %1 index %2';
+Blockly.Msg.SENTRY1_COLORRCGVALUE_MESSAGE0 = 'Sentry1 algorithm Color Recognition %1 index %2';
+Blockly.Msg.SENTRY1_DETECTEDCOLOR_MESSAGE0 = 'Sentry1 algorithm Color %1 detected index %2';
+Blockly.Msg.SENTRY1_DETECTEDBLOB_MESSAGE0 = 'Sentry1 algorithm Blob %1 detected index %2';
+Blockly.Msg.SENTRY1_DETECTEDCARD_MESSAGE0 = 'Sentry1 algorithm Card %1 detected index %2';
+Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 algorithm Ball %1 detected index %2';
+
 
 // Sentry2模块文本
 Blockly.Msg.SENTRY2_BEGIN_MESSAGE0 = 'initialize Sentry2 %1 mode %2';
@@ -183,9 +209,10 @@ Blockly.Msg.SENTRY2_GET_VALUE_MESSAGE0 = 'Sentry2 algorithm %1 Recognition %2 in
 Blockly.Msg.SENTRY2_COLORRCGVALUE_MESSAGE0 = 'Sentry2 algorithm Color Recognition %1 index %2';
 Blockly.Msg.SENTRY2_QRRCGVALUE_MESSAGE0 = 'Sentry2 QrCode Recognition  %1';
 Blockly.Msg.SENTRY2_GET_QRCODEVALUE_MESSAGE0 = 'Sentry2 QrCode value';
-Blockly.Msg.SENTRY2_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 detectedColor %1 detected index %2';
-Blockly.Msg.SENTRY2_DETECTEDBLOB_MESSAGE0 = 'Sentry2 detectedBlob %1 detected index %2';
-Blockly.Msg.SENTRY2_DETECTEDCARD_MESSAGE0 = 'Sentry2 detectedcard %1 detected index %2';
-Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry2 detected20Class %1 detected index %2';
+Blockly.Msg.SENTRY2_LINEVALUE_MESSAGE0 = 'Sentry2 algorithm Line %1 index %2';
+Blockly.Msg.SENTRY2_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 algorithm Color %1 detected index %2';
+Blockly.Msg.SENTRY2_DETECTEDBLOB_MESSAGE0 = 'Sentry2 algorithm Blob %1 detected index %2';
+Blockly.Msg.SENTRY2_DETECTEDCARD_MESSAGE0 = 'Sentry2 algorithm card %1 detected index %2';
+Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry2 algorithm 20Class %1 detected index %2';
 Blockly.Msg.SENTRY2_ROWS_MESSAGE0 = 'Sentry2 image width';
 Blockly.Msg.SENTRY2_COLS_MESSAGE0 = 'Sentry2 image height';

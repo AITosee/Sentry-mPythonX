@@ -5,7 +5,7 @@ Blockly.Msg.CATEGORY_MORPX_SENTRY_SETUP = '設置模塊';
 Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '運行模塊';
 
 // Help文本
-Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化視覺傳感器，並選擇相關的地址';
+Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化視覺傳感器，併選擇相關的地址';
 
 Blockly.Msg.SENTRY_ABSOLUTE_COORDINATE = '絕對坐標'
 Blockly.Msg.SENTRY_PERCENT_AGECOORDINATE = '相對坐標'
@@ -52,8 +52,8 @@ Blockly.Msg.SENTRY_AWB_WHITE_LIGHT = '白光模式';
 Blockly.Msg.SENTRY_AWB_YELLOW_LIGHT = '黃光模式';
 
 // Sentry State Value Type
-Blockly.Msg.SENTRY_STATE_VALUE_X = '橫向坐標';
-Blockly.Msg.SENTRY_STATE_VALUE_Y = '縱向坐標';
+Blockly.Msg.SENTRY_STATE_VALUE_X = '橫嚮坐標';
+Blockly.Msg.SENTRY_STATE_VALUE_Y = '縱嚮坐標';
 Blockly.Msg.SENTRY_STATE_VALUE_WIDTH = '寬度';
 Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT = '高度';
 Blockly.Msg.SENTRY_STATE_VALUE_LABEL = '標簽';
@@ -200,6 +200,7 @@ Blockly.Msg.SENTRY1_DETECTEDCOLOR_MESSAGE0 = 'Sentry1 顏色識別算法檢測�
 Blockly.Msg.SENTRY1_DETECTEDBLOB_MESSAGE0 = 'Sentry1 色塊檢測算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCARD_MESSAGE0 = 'Sentry1 卡片識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTED20CLASS_MESSAGE0 = 'Sentry1 20分類識別算法檢測到 %1 索引 %2';
+Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 球體檢測別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_ROWS_MESSAGE0 = 'Sentry1 圖像寬度';
 Blockly.Msg.SENTRY1_COLS_MESSAGE0 = 'Sentry1 圖像高度';
 

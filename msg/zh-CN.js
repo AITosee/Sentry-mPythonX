@@ -67,6 +67,7 @@ Blockly.Msg.SENTRY_STATE_LINE_EY = '线段终点Y坐标';
 Blockly.Msg.SENTRY_STATE_LINE_SX = '线段起点X坐标';
 Blockly.Msg.SENTRY_STATE_LINE_SY = '线段起点Y坐标';
 Blockly.Msg.SENTRY_STATE_LINE_A  = '线段的倾斜角度';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';
@@ -90,7 +91,6 @@ Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
 Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '物体训练与追踪';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
-
 
 // Sentry 20 Class Type
 Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ 飞机';
@@ -171,7 +171,6 @@ Blockly.Msg.SENTRY_CARD_X = 'X';
 Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
 
-
 Blockly.Msg.SENTRY_BALLTABLETENNIS = '乒乓球';
 Blockly.Msg.SENTRY_BALLTENNIS = '网球';
 
@@ -182,7 +181,7 @@ Blockly.Msg.SENTRY1_VISION_SET_STATUS_MESSAGE0 = 'Sentry1 %1 算法 %2';
 Blockly.Msg.SENTRY1_SET_PARAMNUM_MESSAGE0 = '设置 Sentry1 算法 %1 参数个数 %2';
 Blockly.Msg.SENTRY1_COLORPARAM_MESSAGE0 = '设置 Sentry1 算法 %1 区域中心横坐标 %2 纵坐标 %3 宽度 %4 高度 %5 索引 %6';
 Blockly.Msg.SENTRY1_BOLDPARAM_MESSAGE0 = '设置 Sentry1 算法 %1 最小宽度 %2 高度 %3 检测标签 %4 索引 %5';
-Blockly.Msg.SENTRY1_LED_SET_COLOR_MESSAGE0 = '设置 Sentry1 检测到结果 %2 否则 %3 亮度(0~15) %1';
+Blockly.Msg.SENTRY1_LED_SET_COLOR_MESSAGE0 = '设置 Sentry1 LED 检测到结果 %2 否则 %3 亮度(0~15) %1';
 Blockly.Msg.SENTRY1_CAMERA_SET_ZOOM_MESSAGE0 = '设置 Sentry1 数码变焦 %1';
 Blockly.Msg.SENTRY1_CAMERA_SET_ROTATE_MESSAGE0 = '设置 Sentry1 摄像头旋转180° %1';
 Blockly.Msg.SENTRY1_CAMERA_SET_AWB_MESSAGE0 = '设置 Sentry1 摄像头白平衡 %1';
