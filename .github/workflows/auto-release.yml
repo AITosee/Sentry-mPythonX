@@ -32,7 +32,7 @@ jobs:
           zip -r Sentry-mPython.zip Sentry-mPython  -x '*.git*'
           
           echo deployment tar
-          tar -zcvf Sentry-mPython.tar.gz Sentry-mPython --exclude=Sentry-mPython/.github --exclude=Sentry-mPython/.git
+          tar -zcvf Sentry-mPython.tar.gz --exclude=Sentry-mPython/.github --exclude=Sentry-mPython/.git  Sentry-mPython
           
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
