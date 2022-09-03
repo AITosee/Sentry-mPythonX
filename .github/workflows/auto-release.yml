@@ -27,9 +27,10 @@ jobs:
 
       - name: Generate deployment package
         run: |
+          pwd
           tree
-          zip -r Sentry-mPython.zip .
-          tar -zcvf release.tar.gz .
+          zip -r Sentry-mPython.zip .  -x '*.git*'
+          tar -zcvf release.tar.gz . --exclude=.github --exclude=.git
           
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
