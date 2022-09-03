@@ -670,12 +670,6 @@ Blockly.Blocks["Sentry1DetectedCard"] = {
             [Blockly.Msg.SENTRY_CARD_RIGHT, "sentry1_card_label_e.kCardRight"],
             [Blockly.Msg.SENTRY_CARD_TURN_AROUND, "sentry1_card_label_e.kCardTurnAround"],
             [Blockly.Msg.SENTRY_CARD_PARK, "sentry1_card_label_e.kCardPark"],
-
-            [Blockly.Msg.SENTRY_CARD_CHECK, "sentry1_shape_card_e.kCardCheck"],
-            [Blockly.Msg.SENTRY_CARD_CROSS, "sentry1_shape_card_e.kCardCross"],
-            [Blockly.Msg.SENTRY_CARD_CIRCLE, "sentry1_shape_card_e.kCardCircle"],
-            [Blockly.Msg.SENTRY_CARD_SQUARE, "sentry1_shape_card_e.kCardSquare"],
-            [Blockly.Msg.SENTRY_CARD_TRIANGLE, "sentry1_shape_card_e.kCardTriangle"],
           ],
           type: "field_dropdown",
         },
