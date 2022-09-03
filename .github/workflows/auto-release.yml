@@ -4,13 +4,14 @@ name: auto release
 
 # Controls when the workflow will run
 on:
-  push:
-    tags:
-      - "v*"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+    inputs:
+      tags:
+        description: 'scenario tags'
+        required: true 
+        type: string
+        
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "tagged-release"
@@ -24,20 +25,35 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-
-      - name: Generate deployment package
-        run: |
-          cd ../ && tree
-          echo deployment zip
-          zip -r Sentry-mPython.zip Sentry-mPython  -x '*.git*'
           
-          echo deployment tar
-          tar -zcvf Sentry-mPython.tar.gz --exclude=Sentry-mPython/.github --exclude=Sentry-mPython/.git  Sentry-mPython
+      - name: Get repository and package name
+        id: vars
+        run: |
+            echo ::set-output name=repository::${GITHUB_REPOSITORY#*/}
+            echo ::set-output name=package::${GITHUB_REPOSITORY#*/}-${{ inputs.tags }}
+
+      - name: Entry Workspace
+        run: |
+            echo "repository: ${{ steps.vars.outputs.repository }}"
+            echo "package: ${{ steps.vars.outputs.package }}"
+            tree ${RUNNER_WORKSPACE}
+            
+      - name: Generate deployment zip package
+        run: cd ${RUNNER_WORKSPACE} && zip -r ${{ steps.vars.outputs.package }}.zip ${{ steps.vars.outputs.repository }}  -x '*.git*'
+
+      - name: Generate deployment tgz package
+        run: cd ${RUNNER_WORKSPACE} && tar -zcvf ${{ steps.vars.outputs.package }}.tar.gz --exclude=${{ steps.vars.outputs.repository }}/.github --exclude=${{ steps.vars.outputs.repository }}/.git  ${{ steps.vars.outputs.repository }}
+
+      - name: Move package
+        run: |
+          mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
+          mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.tar.gz ${GITHUB_WORKSPACE}
           
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: "${{ secrets.ACT_TOKEN }}"
           prerelease: false
+          automatic_release_tag: ${{ inputs.tags }}
           files: |
-              Sentry-mPython.zip
-              Sentry-mPython.tar.gz 
+            ${{ steps.vars.outputs.package }}.zip
+            ${{ steps.vars.outputs.package }}.tar.gz 
