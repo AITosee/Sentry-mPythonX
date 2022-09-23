@@ -823,6 +823,7 @@ Blockly.Blocks["Sentry2VisionType"] = {
             [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "sentry2_vision_e.kVisionQrCode"],
             [Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK, "sentry2_vision_e.kVisionObjTrack"],
             [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "sentry2_vision_e.kVisionMotionDetect"],
+            [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, "sentry2_vision_e.kVisionCustom"],
           ],
           type: "field_dropdown",
         },
@@ -927,6 +928,55 @@ Blockly.Blocks["Sentry2SetColorParam"] = {
       nextStatement: null,
       previousStatement: null,
       message0: Blockly.Msg.SENTRY2_COLORPARAM_MESSAGE0,
+    });
+  },
+};
+
+Blockly.Blocks["Sentry2SetVisionParam"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          check: "String",
+          type: "input_value",
+          name: "VisionType",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "x",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "y",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "w",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "h",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "lable",
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "objid",
+        },
+      ],
+      inputsInline: true,
+      nextStatement: null,
+      previousStatement: null,
+      message0: Blockly.Msg.SENTRY2_VISIONPARAM_MESSAGE0,
     });
   },
 };
@@ -1102,30 +1152,29 @@ Blockly.Blocks["Sentry2SetBlodParam"] = {
 //   },
 // };
 
-// Blockly.Blocks["Sentry2CameraSetAwb"] = {
-//   init: function () {
-//     this.jsonInit({
-//       colour: Sentry_SetupMode_Color,
-//       args0: [
-
-//         {
-//           name: "awb",
-//           options: [
-//             [Blockly.Msg.SENTRY_AWB_AUTO, "sentry_camera_white_balance_e.kAutoWhiteBalance"],
-//             [Blockly.Msg.SENTRY_AWB_LOCK, "sentry_camera_white_balance_e.kLockWhiteBalance"],
-//             [Blockly.Msg.SENTRY_AWB_WHITE_LIGHT, "sentry_camera_white_balance_e.kWhiteLight"],
-//             [Blockly.Msg.SENTRY_AWB_YELLOW_LIGHT, "sentry_camera_white_balance_e.kYellowLight"],
-//           ],
-//           type: "field_dropdown",
-//         },
-//       ],
-//       nextStatement: null,
-//       previousStatement: null,
-//       message0: Blockly.Msg.SENTRY2_CAMERA_SET_AWB_MESSAGE0,
-//       inputsInline: true,
-//     });
-//   },
-// };
+Blockly.Blocks["Sentry2CameraSetAwb"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_SetupMode_Color,
+      args0: [
+        {
+          name: "awb",
+          options: [
+            [Blockly.Msg.SENTRY_AWB_AUTO, "sentry_camera_white_balance_e.kAutoWhiteBalance"],
+            [Blockly.Msg.SENTRY_AWB_LOCK, "sentry_camera_white_balance_e.kLockWhiteBalance"],
+            [Blockly.Msg.SENTRY_AWB_WHITE_LIGHT, "sentry_camera_white_balance_e.kWhiteLight"],
+            [Blockly.Msg.SENTRY_AWB_YELLOW_LIGHT, "sentry_camera_white_balance_e.kYellowLight"],
+          ],
+          type: "field_dropdown",
+        },
+      ],
+      nextStatement: null,
+      previousStatement: null,
+      message0: Blockly.Msg.SENTRY2_CAMERA_SET_AWB_MESSAGE0,
+      inputsInline: true,
+    });
+  },
+};
 
 // Blockly.Blocks["Sentry2CameraSetFPS"] = {
 //   init: function () {
@@ -1358,6 +1407,41 @@ Blockly.Blocks["Sentry2GetValue"] = {
     });
   },
 };
+
+Blockly.Blocks["Sentry2GetValueNomal"] = {
+  init: function () {
+    this.jsonInit({
+      colour: Sentry_RunMode_Color,
+      args0: [
+        {
+          check: "String",
+          type: "input_value",
+          name: "VisionType",
+        },
+        {
+          type: "field_dropdown",
+          name: "objinfo",
+          options: [
+            [Blockly.Msg.SENTRY_STATE_VALUE+'1', "sentry_obj_info_e.kXValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE+'2', "sentry_obj_info_e.kYValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE+'3', "sentry_obj_info_e.kWidthValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE+'4', "sentry_obj_info_e.kHeightValue"],
+            [Blockly.Msg.SENTRY_STATE_VALUE+'5', "sentry_obj_info_e.kLabel"],
+          ],
+        },
+        {
+          check: "Number",
+          type: "input_value",
+          name: "objid",
+        },
+      ],
+      output: null,
+      inputsInline: true,
+      message0: Blockly.Msg.SENTRY2_GET_VALUE_MESSAGE0,
+    });
+  },
+};
+
 
 Blockly.Blocks["Sentry2ColorRcgValue"] = {
   init: function () {

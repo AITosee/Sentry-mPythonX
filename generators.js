@@ -330,6 +330,19 @@ Blockly.Python['Sentry2SetParamNum'] = function (block) {
   return code;
 };
 
+//算法参数
+Blockly.Python['Sentry2SetVisionParam'] = function (block) {
+  var x = Blockly.Python.valueToCode(block, "x", Blockly.Python.ORDER_NONE) || '1';
+  var y = Blockly.Python.valueToCode(block, "y", Blockly.Python.ORDER_NONE) || '1';
+  var w = Blockly.Python.valueToCode(block, "w", Blockly.Python.ORDER_NONE) || '1';
+  var h = Blockly.Python.valueToCode(block, "h", Blockly.Python.ORDER_NONE) || '1';
+  var lable = Blockly.Python.valueToCode(block, "lable", Blockly.Python.ORDER_NONE) || '1';
+  var objid = Blockly.Python.valueToCode(block, "objid", Blockly.Python.ORDER_ATOMIC);
+  var code = 'sentry' + '.SetParam(' + 'sentry2_vision_e.kVisionColor, [' + x + ', ' + y + ', ' + w + ', ' + h + ', '+ lable +']' + ', ' + objid + ')\n';
+
+  return code;
+};
+
 // Color 算法参数
 Blockly.Python['Sentry2SetColorParam'] = function (block) {
   var x = Blockly.Python.valueToCode(block, "x", Blockly.Python.ORDER_NONE) || '1';
@@ -499,7 +512,7 @@ Blockly.Python['Sentry2Detected'] = function (block) {
   return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
-Blockly.Python['Sentry2GetValue'] = function (block) {
+Blockly.Python['Sentry2GetValue'] = Blockly.Python['Sentry2GetValueNomal'] = function (block) {
 
   var VisionType = Blockly.Python.valueToCode(block, 'VisionType', Blockly.Python.ORDER_ATOMIC);
   var objinfo = block.getFieldValue('objinfo');

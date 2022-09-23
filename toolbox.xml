@@ -76,6 +76,7 @@
           </shadow>
         </value>
       </block>
+      <block type="Sentry1CameraSetAwb"></block>
       <!-- <block type="Sentry1CameraSetZoom"></block>
       <block type="Sentry1UartSetBaudrate"></block>
       <block type="Sentry1CameraSetAwb"></block>
@@ -155,6 +156,7 @@
           <shadow type="Sentry2VisionType"></shadow>
         </value>
       </block>
+      <block type="Sentry2CameraSetAwb"></block>
       <!-- <block type="SeneorSetCoordinateType"></block> -->
       <!-- 设置 算法参数个数-->
       <block type="Sentry2SetParamNum">
@@ -162,6 +164,42 @@
           <shadow type="Sentry2VisionType"></shadow>
         </value>
         <value name="max_num">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <!-- 算法参数-->
+      <block type="Sentry2SetVisionParam">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="lable">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="objid">
           <shadow type="math_number">
             <field name="NUM">1</field>
           </shadow>
@@ -221,6 +259,16 @@
         </value>
       </block>
       <block type="Sentry2GetValue">
+        <value name="VisionType">
+          <shadow type="Sentry2VisionType"></shadow>
+        </value>
+        <value name="objid">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry2GetValueNomal">
         <value name="VisionType">
           <shadow type="Sentry2VisionType"></shadow>
         </value>

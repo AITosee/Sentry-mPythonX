@@ -1,7 +1,7 @@
 'use strict';
 goog.require('Blockly.Msg');
 
-Blockly.Msg.CATEGORY_MORPX_SENTRY_SETUP = '設置模塊';
+Blockly.Msg.CATEGORY_MORPX_SENTRY_SETUP = '設定模塊';
 Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '運行模塊';
 
 // Help文本
@@ -38,7 +38,7 @@ Blockly.Msg.SENTRY_LEVEL9 = '等級9';
 Blockly.Msg.SENTRY_LEVEL10 = '等級10';
 
 // Sentry Zoom Type
-Blockly.Msg.SENTRY_ZOOM_DEFAULT = '默認';
+Blockly.Msg.SENTRY_ZOOM_DEFAULT = '預設';
 Blockly.Msg.SENTRY_ZOOM_1 = '等級1';
 Blockly.Msg.SENTRY_ZOOM_2 = '等級2';
 Blockly.Msg.SENTRY_ZOOM_3 = '等級3';
@@ -52,6 +52,7 @@ Blockly.Msg.SENTRY_AWB_WHITE_LIGHT = '白光模式';
 Blockly.Msg.SENTRY_AWB_YELLOW_LIGHT = '黃光模式';
 
 // Sentry State Value Type
+Blockly.Msg.SENTRY_STATE_VALUE = '結果'
 Blockly.Msg.SENTRY_STATE_VALUE_X = '橫嚮坐標';
 Blockly.Msg.SENTRY_STATE_VALUE_Y = '縱嚮坐標';
 Blockly.Msg.SENTRY_STATE_VALUE_WIDTH = '寬度';
@@ -67,6 +68,7 @@ Blockly.Msg.SENTRY_STATE_LINE_EY = '線段終點Y坐標';
 Blockly.Msg.SENTRY_STATE_LINE_SX = '線段起點X坐標';
 Blockly.Msg.SENTRY_STATE_LINE_SY = '線段起點Y坐標';
 Blockly.Msg.SENTRY_STATE_LINE_A  = '線段的傾斜角度';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';
@@ -90,15 +92,15 @@ Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分類識別';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二維碼識別';
 Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '物體訓練與追蹤';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '運動物體檢測';
-
+Blockly.Msg.SENTRY_VISION_VISIONCUSTOM = '自定義';
 
 // Sentry 20 Class Type
 Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ 飛機';
-Blockly.Msg.SENTRY_CLASS20_BICYCLE = '🚲 自行車';
+Blockly.Msg.SENTRY_CLASS20_BICYCLE = '🚲 腳踏車';
 Blockly.Msg.SENTRY_CLASS20_BIRD = '🐦 鳥';
 Blockly.Msg.SENTRY_CLASS20_BOAT = '🚤 船';
 Blockly.Msg.SENTRY_CLASS20_BOTTLE = '🍾 瓶子';
-Blockly.Msg.SENTRY_CLASS20_BUS = ' 🚌 公交車';
+Blockly.Msg.SENTRY_CLASS20_BUS = ' 🚌 公車';
 Blockly.Msg.SENTRY_CLASS20_CAR = '🚗 小汽車';
 Blockly.Msg.SENTRY_CLASS20_CAT = ' 🐱 貓';
 Blockly.Msg.SENTRY_CLASS20_CHAIR = '🪑 椅子';
@@ -106,7 +108,7 @@ Blockly.Msg.SENTRY_CLASS20_COW = '🐄 奶牛';
 Blockly.Msg.SENTRY_CLASS20_TABLE = '🔲 桌子';
 Blockly.Msg.SENTRY_CLASS20_DOG = '🐕 狗';
 Blockly.Msg.SENTRY_CLASS20_HORSE = '🐎 馬';
-Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = '🏍️ 摩托車';
+Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = '🏍️ 機車';
 Blockly.Msg.SENTRY_CLASS20_PERSON = '🤵 人';
 Blockly.Msg.SENTRY_CLASS20_PLANT = '🪴 植物';
 Blockly.Msg.SENTRY_CLASS20_SHEEP = '🐏 羊';
@@ -171,69 +173,44 @@ Blockly.Msg.SENTRY_CARD_X = 'X';
 Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
 
-
-Blockly.Msg.SENTRY_BALLTABLETENNIS = '乒乓球';
+Blockly.Msg.SENTRY_BALLTABLETENNIS = '桌球';
 Blockly.Msg.SENTRY_BALLTENNIS = '網球';
 
 // Sentry1模塊文本
 Blockly.Msg.SENTRY1_BEGIN_MESSAGE0 = '初始化 Sentry1 端口 %1 地址 %2';
-Blockly.Msg.SENTRY1_SET_DEFAULT_MESSAGE0 = ' Sentry1 恢復默認參數';
+Blockly.Msg.SENTRY1_SET_DEFAULT_MESSAGE0 = ' Sentry1 恢復預設參數';
+Blockly.Msg.SENTRY1_LED_SET_COLOR_MESSAGE0 = '設定 Sentry1 LED 檢測到結果 %2 否則 %3 亮度(0~15) %1';
 Blockly.Msg.SENTRY1_VISION_SET_STATUS_MESSAGE0 = 'Sentry1 %1 算法 %2';
-Blockly.Msg.SENTRY1_SET_PARAMNUM_MESSAGE0 = '設置 Sentry1 算法 %1 參數個數 %2';
-Blockly.Msg.SENTRY1_COLORPARAM_MESSAGE0 = '設置 Sentry1 算法 %1 區域中心橫坐標 %2 縱坐標 %3 寬度 %4 高度 %5 索引 %6';
-Blockly.Msg.SENTRY1_BOLDPARAM_MESSAGE0 = '設置 Sentry1 算法 %1 最小寬度 %2 高度 %3 檢測標簽 %4 索引 %5';
-Blockly.Msg.SENTRY1_LED_SET_COLOR_MESSAGE0 = '設置 Sentry1 檢測到結果 %2 否則 %3 亮度(0~15) %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_ZOOM_MESSAGE0 = '設置 Sentry1 數碼變焦 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_ROTATE_MESSAGE0 = '設置 Sentry1 攝像頭旋轉180° %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_AWB_MESSAGE0 = '設置 Sentry1 攝像頭白平衡 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_FPS_MESSAGE0 = '設置 Sentry1 攝像頭高幀率模式 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_BRIGHTNESS_MESSAGE0 = '設置 Sentry1 圖像亮度 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_CONTRAST_MESSAGE0 = '設置 Sentry1 圖像對比度 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_SATURATION_MESSAGE0 = '設置 Sentry1 圖像飽和度 %1';
-Blockly.Msg.SENTRY1_CAMERA_SET_SHAPRNESS_MESSAGE0 = '設置 Sentry1 圖像銳化 %1';
-Blockly.Msg.SENTRY1_UART_SET_BAUDRATE_MESSAGE0 = '設置 Sentry1 串口波特率 %1';
+Blockly.Msg.SENTRY1_SET_PARAMNUM_MESSAGE0 = '設定 Sentry1 算法 %1 參數個數 %2';
+Blockly.Msg.SENTRY1_COLORPARAM_MESSAGE0 = '設定 Sentry1 算法 %1 區域中心橫坐標 %2 縱坐標 %3 寬度 %4 高度 %5 索引 %6';
+Blockly.Msg.SENTRY1_BOLDPARAM_MESSAGE0 = '設定 Sentry1 算法 %1 最小寬度 %2 高度 %3 檢測標簽 %4 索引 %5';
+Blockly.Msg.SENTRY1_CAMERA_SET_AWB_MESSAGE0 = '設定 Sentry1 攝像頭白平衡 %1';
 Blockly.Msg.SENTRY1_DETECTED_MESSAGE0 = 'Sentry1 算法 %1 檢測結果數量';
-Blockly.Msg.SENTRY1_GET_VALUE_MESSAGE0 = 'Sentry1 算法 %1 結果 %2 索引 %3';
-Blockly.Msg.SENTRY1_COLORRCGVALUE_MESSAGE0 = 'Sentry1 顏色識別結果 %1 索引 %2';
-Blockly.Msg.SENTRY1_LINEVALUE_MESSAGE0 = 'Sentry1 線段檢測結果 %1 索引 %2';
+Blockly.Msg.SENTRY1_GET_VALUE_MESSAGE0 = 'Sentry1 算法 %1 %2 索引 %3';
+Blockly.Msg.SENTRY1_COLORRCGVALUE_MESSAGE0 = 'Sentry1 顏色識別 %1 索引 %2';
+Blockly.Msg.SENTRY1_LINEVALUE_MESSAGE0 = 'Sentry1 線段檢測 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCOLOR_MESSAGE0 = 'Sentry1 顏色識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDBLOB_MESSAGE0 = 'Sentry1 色塊檢測算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCARD_MESSAGE0 = 'Sentry1 卡片識別算法檢測到 %1 索引 %2';
-Blockly.Msg.SENTRY1_DETECTED20CLASS_MESSAGE0 = 'Sentry1 20分類識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 球體檢測別算法檢測到 %1 索引 %2';
-Blockly.Msg.SENTRY1_ROWS_MESSAGE0 = 'Sentry1 圖像寬度';
-Blockly.Msg.SENTRY1_COLS_MESSAGE0 = 'Sentry1 圖像高度';
 
 
 // Sentry2模塊文本
 Blockly.Msg.SENTRY2_BEGIN_MESSAGE0 = '初始化 Sentry2 端口 %1 地址 %2';
-Blockly.Msg.SENTRY2_SET_DEFAULT_MESSAGE0 = ' Sentry2 恢復默認參數';
+Blockly.Msg.SENTRY2_SET_DEFAULT_MESSAGE0 = ' Sentry2 恢復預設參數';
 Blockly.Msg.SENTRY2_VISION_SET_STATUS_MESSAGE0 = 'Sentry2 %1 算法 %2';
-Blockly.Msg.SENTRY2_SET_PARAMNUM_MESSAGE0 = '設置 Sentry2 算法 %1 參數個數 %2';
-Blockly.Msg.SENTRY2_COLORPARAM_MESSAGE0 = '設置 Sentry2 算法 %1 區域中心橫坐標 %2 縱坐標 %3 寬度 %4 高度 %5 索引 %6';
-Blockly.Msg.SENTRY2_BOLDPARAM_MESSAGE0 = '設置 Sentry2 算法 %1 最小寬度 %2 高度 %3 檢測標簽 %4 索引 %5';
-Blockly.Msg.SENTRY2_LCD_SET_MODE_MESSAGE0 = '設置 Sentry2 LCD 顯示 %1';
-Blockly.Msg.SENTRY2_LED_SET_COLOR_MESSAGE0 = '設置 Sentry2 檢測到結果 %2 否則 %3 亮度(0~15) %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_ZOOM_MESSAGE0 = '設置 Sentry2 數碼變焦 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_ROTATE_MESSAGE0 = '設置 Sentry2 攝像頭旋轉180° %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_AWB_MESSAGE0 = '設置 Sentry2 攝像頭白平衡 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_FPS_MESSAGE0 = '設置 Sentry2 攝像頭高幀率模式 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_BRIGHTNESS_MESSAGE0 = '設置 Sentry2 圖像亮度 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_CONTRAST_MESSAGE0 = '設置 Sentry2 圖像對比度 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_SATURATION_MESSAGE0 = '設置 Sentry2 圖像飽和度 %1';
-Blockly.Msg.SENTRY2_CAMERA_SET_SHAPRNESS_MESSAGE0 = '設置 Sentry2 圖像銳化 %1';
-Blockly.Msg.SENTRY2_UART_SET_BAUDRATE_MESSAGE0 = '設置 Sentry2 串口波特率 %1';
+Blockly.Msg.SENTRY2_SET_PARAMNUM_MESSAGE0 = '設定 Sentry2 算法 %1 參數個數 %2';
+Blockly.Msg.SENTRY2_COLORPARAM_MESSAGE0 = '設定 Sentry2 算法 %1 區域中心 橫坐標 %2 縱坐標 %3 寬度 %4 高度 %5 索引 %6';
+Blockly.Msg.SENTRY2_BOLDPARAM_MESSAGE0 = '設定 Sentry2 算法 %1 最小寬度 %2 高度 %3 檢測標簽 %4 索引 %5';
+Blockly.Msg.SENTRY2_VISIONPARAM_MESSAGE0 = '設定 Sentry2 算法 %1 參數1 %2 參數2 %3 參數3 %4 參數4 %5 參數5 %6 索引 %7';
+Blockly.Msg.SENTRY2_CAMERA_SET_AWB_MESSAGE0 = '設定 Sentry2 攝像頭白平衡 %1';
 Blockly.Msg.SENTRY2_DETECTED_MESSAGE0 = 'Sentry2 算法 %1 檢測結果數量';
-Blockly.Msg.SENTRY2_GET_VALUE_MESSAGE0 = 'Sentry2 算法 %1 結果 %2 索引 %3';
-Blockly.Msg.SENTRY2_COLORRCGVALUE_MESSAGE0 = 'Sentry2 顏色識別結果 %1 索引 %2';
-Blockly.Msg.SENTRY2_QRRCGVALUE_MESSAGE0 = ' Sentry2 二維碼識別結果 %1';
+Blockly.Msg.SENTRY2_GET_VALUE_MESSAGE0 = 'Sentry2 算法 %1  %2 索引 %3';
+Blockly.Msg.SENTRY2_COLORRCGVALUE_MESSAGE0 = 'Sentry2 顏色識別 %1 索引 %2';
+Blockly.Msg.SENTRY2_QRRCGVALUE_MESSAGE0 = ' Sentry2 二維碼識別 %1';
 Blockly.Msg.SENTRY2_GET_QRCODEVALUE_MESSAGE0 = 'Sentry2 二維碼識別結果字符串';
 Blockly.Msg.SENTRY2_LINEVALUE_MESSAGE0 = 'Sentry2 線段檢測結果 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 顏色識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTEDBLOB_MESSAGE0 = 'Sentry2 色塊檢測算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTEDCARD_MESSAGE0 = 'Sentry2 卡片識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry2 20分類識別算法檢測到 %1 索引 %2';
-Blockly.Msg.SENTRY2_ROWS_MESSAGE0 = 'Sentry2 圖像寬度';
-Blockly.Msg.SENTRY2_COLS_MESSAGE0 = 'Sentry2 圖像高度';
-
-
