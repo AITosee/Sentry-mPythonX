@@ -192,7 +192,7 @@ Blockly.Msg.SENTRY1_LINEVALUE_MESSAGE0 = 'Sentry1 线段检测 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCOLOR_MESSAGE0 = 'Sentry1 颜色识别算法检测到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDBLOB_MESSAGE0 = 'Sentry1 色块检测算法检测到 %1 索引 %2';
 Blockly.Msg.SENTRY1_DETECTEDCARD_MESSAGE0 = 'Sentry1 卡片识别算法检测到 %1 索引 %2';
-Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 球体检测别算法检测到 %1 索引 %2';
+Blockly.Msg.SENTRY1_DETECTEDBALL_MESSAGE0 = 'Sentry1 球体检测算法检测到 %1 索引 %2';
 
 
 // Sentry2模块文本

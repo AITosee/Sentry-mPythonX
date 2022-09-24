@@ -213,4 +213,4 @@ Blockly.Msg.SENTRY2_LINEVALUE_MESSAGE0 = 'Sentry2 線段檢測結果 %1 索引 %
 Blockly.Msg.SENTRY2_DETECTEDCOLOR_MESSAGE0 = 'Sentry2 顏色識別算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTEDBLOB_MESSAGE0 = 'Sentry2 色塊檢測算法檢測到 %1 索引 %2';
 Blockly.Msg.SENTRY2_DETECTEDCARD_MESSAGE0 = 'Sentry2 卡片識別算法檢測到 %1 索引 %2';
-Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry2 20分類識別算法檢測到 %1 索引 %2';
+Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0 = 'Sentry2 20分類識算法檢測到 %1 索引 %2';
