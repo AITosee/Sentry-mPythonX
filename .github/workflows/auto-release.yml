@@ -2,42 +2,27 @@
 
 name: auto release
 
-# Controls when the workflow will run
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'scenario tags'
-        required: true 
-        type: string
-        
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "tagged-release"
-  tagged-release:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  push:
+    tags:
+      - "v*.*.*"
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           submodules: true
-          
+
+
       - name: Get repository and package name
         id: vars
         run: |
             echo ::set-output name=repository::${GITHUB_REPOSITORY#*/}
-            echo ::set-output name=package::${GITHUB_REPOSITORY#*/}-${{ inputs.tags }}
+            echo ::set-output name=package::${GITHUB_REPOSITORY#*/}-${GITHUB_REF/refs\/tags\//}
 
-      - name: Entry Workspace
-        run: |
-            echo "repository: ${{ steps.vars.outputs.repository }}"
-            echo "package: ${{ steps.vars.outputs.package }}"
-            tree ${RUNNER_WORKSPACE}
-            
       - name: Generate deployment zip package
         run: cd ${RUNNER_WORKSPACE} && zip -r ${{ steps.vars.outputs.package }}.zip ${{ steps.vars.outputs.repository }}  -x '*.git*'
 
@@ -49,11 +34,10 @@ jobs:
           mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
           mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.tar.gz ${GITHUB_WORKSPACE}
           
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Create Release and Upload Release Asset
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.ACT_TOKEN }}"
-          prerelease: false
-          automatic_release_tag: ${{ inputs.tags }}
           files: |
             ${{ steps.vars.outputs.package }}.zip
             ${{ steps.vars.outputs.package }}.tar.gz 
+
