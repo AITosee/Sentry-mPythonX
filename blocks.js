@@ -1635,32 +1635,6 @@ Blockly.Blocks["Sentry2DetectedCard"] = {
             [Blockly.Msg.SENTRY_CARD_8, "sentry2_card_label_e.kCardEight"],
             [Blockly.Msg.SENTRY_CARD_9, "sentry2_card_label_e.kCardNine"],
             [Blockly.Msg.SENTRY_CARD_0, "sentry2_card_label_e.kCardZero"],
-            [Blockly.Msg.SENTRY_CARD_A, "sentry2_card_label_e.kCardA"],
-            [Blockly.Msg.SENTRY_CARD_B, "sentry2_card_label_e.kCardB"],
-            [Blockly.Msg.SENTRY_CARD_C, "sentry2_card_label_e.kCardC"],
-            [Blockly.Msg.SENTRY_CARD_D, "sentry2_card_label_e.kCardD"],
-            [Blockly.Msg.SENTRY_CARD_E, "sentry2_card_label_e.kCardE"],
-            [Blockly.Msg.SENTRY_CARD_F, "sentry2_card_label_e.kCardF"],
-            [Blockly.Msg.SENTRY_CARD_G, "sentry2_card_label_e.kCardG"],
-            [Blockly.Msg.SENTRY_CARD_H, "sentry2_card_label_e.kCardH"],
-            [Blockly.Msg.SENTRY_CARD_I, "sentry2_card_label_e.kCardI"],
-            [Blockly.Msg.SENTRY_CARD_J, "sentry2_card_label_e.kCardJ"],
-            [Blockly.Msg.SENTRY_CARD_K, "sentry2_card_label_e.kCardK"],
-            [Blockly.Msg.SENTRY_CARD_L, "sentry2_card_label_e.kCardL"],
-            [Blockly.Msg.SENTRY_CARD_N, "sentry2_card_label_e.kCardM"],
-            [Blockly.Msg.SENTRY_CARD_N, "sentry2_card_label_e.kCardN"],
-            [Blockly.Msg.SENTRY_CARD_O, "sentry2_card_label_e.kCardO"],
-            [Blockly.Msg.SENTRY_CARD_V, "sentry2_card_label_e.kCardP"],
-            [Blockly.Msg.SENTRY_CARD_W, "sentry2_card_label_e.kCardQ"],
-            [Blockly.Msg.SENTRY_CARD_R, "sentry2_card_label_e.kCardR"],
-            [Blockly.Msg.SENTRY_CARD_S, "sentry2_card_label_e.kCardS"],
-            [Blockly.Msg.SENTRY_CARD_T, "sentry2_card_label_e.kCardT"],
-            [Blockly.Msg.SENTRY_CARD_U, "sentry2_card_label_e.kCardU"],
-            [Blockly.Msg.SENTRY_CARD_V, "sentry2_card_label_e.kCardV"],
-            [Blockly.Msg.SENTRY_CARD_W, "sentry2_card_label_e.kCardW"],
-            [Blockly.Msg.SENTRY_CARD_X, "sentry2_card_label_e.kCardX"],
-            [Blockly.Msg.SENTRY_CARD_Y, "sentry2_card_label_e.kCardY"],
-            [Blockly.Msg.SENTRY_CARD_Z, "sentry2_card_label_e.kCardZ"],
           ],
           type: "field_dropdown",
         },
@@ -1717,30 +1691,6 @@ Blockly.Blocks["Sentry2Detected20Class"] = {
       output: null,
       inputsInline: true,
       message0: Blockly.Msg.SENTRY2_DETECTED20CLASS_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["Sentry2Rows"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_RunMode_Color,
-
-      output: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY2_ROWS_MESSAGE0,
-    });
-  },
-};
-
-Blockly.Blocks["Sentry2Cols"] = {
-  init: function () {
-    this.jsonInit({
-      colour: Sentry_RunMode_Color,
-
-      output: null,
-      inputsInline: true,
-      message0: Blockly.Msg.SENTRY2_COLS_MESSAGE0,
     });
   },
 };
