@@ -1,3 +1,3 @@
-# Sentry-mPython
+# Sentry-mPythonX
 
-Sentry-mPython library for all Sentry series products!
+Sentry-mPythonX library for all Sentry series products!
